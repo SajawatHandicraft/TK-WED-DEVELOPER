@@ -207,5 +207,57 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+<form id="enquiryForm">
+  <label>Your Name</label>
+  <input id="customerName" required placeholder="Apna naam"
+    style="box-sizing:border-box;width:100%;padding:12px;margin:8px 0 16px;">
+
+  <label>Mobile Number</label>
+  <input id="customerMobile" type="tel" required placeholder="Mobile number"
+    style="box-sizing:border-box;width:100%;padding:12px;margin:8px 0 16px;">
+
+  <label>Website Type</label>
+  <select id="websiteType" required
+    style="box-sizing:border-box;width:100%;padding:12px;margin:8px 0 16px;">
+    <option value="">Select karein</option>
+    <option>Business Website</option>
+    <option>Online Store</option>
+    <option>Portfolio Website</option>
+    <option>Other</option>
+  </select>
+
+  <label>Budget Aur Requirement</label>
+  <textarea id="requirements" required placeholder="Budget aur website ki details"
+    style="box-sizing:border-box;width:100%;padding:12px;margin:8px 0 16px;min-height:100px;"></textarea>
+
+  <button type="submit"
+    style="width:100%;padding:14px;background:#25D366;color:white;border:0;border-radius:8px;font-weight:bold;">
+    WhatsApp Par Enquiry Bhejein
+  </button>
+</form>
+
+<script>
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("customerName").value.trim();
+  const mobile = document.getElementById("customerMobile").value.trim();
+  const type = document.getElementById("websiteType").value;
+  const requirements = document.getElementById("requirements").value.trim();
+
+  const message =
+    "New Website Enquiry - TK Web Developer\n\n" +
+    "Customer Name: " + name + "\n" +
+    "Mobile Number: " + mobile + "\n" +
+    "Website Type: " + type + "\n" +
+    "Budget / Requirement: " + requirements;
+
+  const url = "https://wa.me/919016249230?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+});
+</script>
 </body>
 </html>
