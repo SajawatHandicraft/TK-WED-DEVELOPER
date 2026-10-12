@@ -1,261 +1,163 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lucky Web Developer creates professional business websites, product catalogues and SEO-friendly websites at affordable prices.">
-  <meta name="theme-color" content="#38251d">
-  <title>Lucky Web Developer | Websites That Grow Your Business</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #faf6ef;
-      color: #38251d;
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1100px, 90%); margin: auto; }
-    header {
-      background: #fffaf3;
-      border-bottom: 1px solid #e8ddd0;
-      position: sticky; top: 0; z-index: 10;
-    }
-    nav {
-      min-height: 76px; display: flex;
-      justify-content: space-between; align-items: center;
-      gap: 18px; flex-wrap: wrap; padding: 14px 0;
-    }
-    .logo { font-size: 21px; font-weight: 800; }
-    .logo span { color: #a66b3f; }
-    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
-    .hero { padding: 85px 0 75px; }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.2fr .8fr;
-      gap: 38px; align-items: center;
-    }
-    .tag {
-      display: inline-block; border: 1px solid #d9c5ae;
-      border-radius: 30px; padding: 5px 13px;
-      font-size: 12px; letter-spacing: 1px; margin-bottom: 20px;
-    }
-    h1 { font-size: clamp(38px, 5.5vw, 62px); line-height: 1.12; margin-bottom: 22px; }
-    h1 span { color: #a66b3f; }
-    .hero p { color: #74665a; max-width: 570px; margin-bottom: 26px; }
-    .btn {
-      display: inline-block; padding: 12px 20px; border-radius: 7px;
-      font-weight: 700; background: #38251d; color: white;
-      margin: 4px 7px 4px 0;
-    }
-    .btn-light { background: transparent; color: #38251d; border: 1px solid #bba58e; }
-    .hero-card {
-      background: #38251d; color: #fff8ee; border-radius: 18px;
-      padding: 30px; box-shadow: 0 18px 45px #38251d20;
-    }
-    .hero-card small { color: #d8b99b; letter-spacing: 2px; }
-    .hero-card h2 { font-size: 28px; margin: 14px 0; }
-    .hero-card p { color: #e6d7c8; }
-    .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
-    .mini { padding: 14px; background: #ffffff12; border-radius: 10px; }
-    .mini strong { display: block; font-size: 20px; }
-    section { padding: 65px 0; }
-    .section-head { text-align: center; max-width: 650px; margin: 0 auto 32px; }
-    .section-head h2 { font-size: clamp(27px, 4vw, 38px); margin-bottom: 10px; }
-    .section-head p { color: #74665a; }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card {
-      background: #fffdf9; padding: 24px; border: 1px solid #eadfd2;
-      border-radius: 13px;
-    }
-    .card .icon { font-size: 29px; }
-    .card h3 { margin: 10px 0; font-size: 20px; }
-    .card p { color: #74665a; font-size: 14px; }
-    .price { font-size: 25px; font-weight: 800; margin: 13px 0; }
-    .note { font-size: 12px; color: #74665a; }
-    .portfolio { background: #f0e6d9; }
-    .project { background: #fffaf3; border-radius: 12px; padding: 25px; border: 1px solid #e1d1bf; }
-    .project h3 { margin-bottom: 8px; }
-    .project p { color: #74665a; font-size: 14px; }
-    .contact-box {
-      background: #38251d; color: #fff8ee; padding: 35px;
-      border-radius: 17px; text-align: center;
-    }
-    .contact-box p { color: #e6d7c8; margin: 12px 0 22px; }
-    .contact-box .btn { background: #fff8ee; color: #38251d; }
-    footer { text-align: center; padding: 24px 0; color: #74665a; font-size: 13px; }
-    @media (max-width: 760px) {
-      .hero { padding: 55px 0; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .cards { grid-template-columns: 1fr; }
-      nav { justify-content: center; }
-      .nav-links { justify-content: center; }
-      .contact-box { padding: 25px 18px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TK Web Developer builds professional, mobile-friendly business websites, product catalogues and portfolios.">
+<meta name="theme-color" content="#38251d">
+<title>TK Web Developer | Websites for Your Business</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#faf6ef;color:#38251d;line-height:1.7}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,90%);margin:auto}
+header{background:#fffaf3;border-bottom:1px solid #e8ddd0;position:sticky;top:0;z-index:10}
+nav{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 0}
+.logo{font-size:21px;font-weight:800}.logo span,h1 span{color:#a66b3f}
+.nav-links{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
+.hero{padding:80px 0}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.tag{display:inline-block;border:1px solid #d9c5ae;border-radius:30px;padding:5px 13px;font-size:12px;letter-spacing:1px;margin-bottom:18px}
+h1{font-size:clamp(38px,5.5vw,62px);line-height:1.12;margin-bottom:20px}
+.hero p,.section-head p,.card p,.project p{color:#74665a}
+.hero p{max-width:570px;margin-bottom:24px}
+.btn{display:inline-block;padding:12px 20px;border-radius:7px;font-weight:bold;background:#38251d;color:white;margin:4px 7px 4px 0;border:0;cursor:pointer}
+.btn-light{background:transparent;color:#38251d;border:1px solid #bba58e}
+.hero-card{background:#38251d;color:#fff8ee;border-radius:18px;padding:30px;box-shadow:0 18px 45px #38251d20}
+.hero-card small{color:#d8b99b;letter-spacing:2px}
+.hero-card h2{font-size:28px;margin:14px 0}
+.hero-card p{color:#e6d7c8}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.mini{padding:14px;background:#ffffff12;border-radius:10px}
+.mini strong{display:block;font-size:20px}
+section{padding:65px 0}
+.section-head{text-align:center;max-width:650px;margin:0 auto 32px}
+.section-head h2{font-size:clamp(27px,4vw,38px);margin-bottom:10px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.project{background:#fffdf9;padding:24px;border:1px solid #eadfd2;border-radius:13px}
+.card .icon{font-size:29px}
+.card h3,.project h3{margin:10px 0}
+.price{font-size:25px;font-weight:800;margin:13px 0}
+.portfolio{background:#f0e6d9}
+.contact-box{background:#38251d;color:#fff8ee;padding:35px;border-radius:17px;text-align:center}
+.contact-box p{color:#e6d7c8;margin:12px 0 22px}
+.contact-box .btn{background:#fff8ee;color:#38251d}
+form{max-width:650px;margin:28px auto 0;text-align:left;background:#fffaf3;color:#38251d;padding:25px;border-radius:13px}
+form h3{margin-bottom:16px}
+label{display:block;font-weight:bold;margin-top:10px}
+input,select,textarea{width:100%;padding:12px;margin:7px 0 12px;border:1px solid #cbb7a5;border-radius:6px;font:inherit;background:white}
+textarea{min-height:110px;resize:vertical}
+form button{width:100%;padding:14px;background:#25a85a;color:white;border:0;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer}
+footer{text-align:center;padding:24px 0;color:#74665a;font-size:13px}
+.whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;padding:13px 17px;border-radius:30px;font-weight:bold;box-shadow:0 3px 12px #999;z-index:20}
+@media(max-width:760px){.hero{padding:50px 0}.hero-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}nav{justify-content:center}.nav-links{justify-content:center}.contact-box{padding:25px 16px}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <a class="logo" href="#home">Lucky <span>Web Developer</span></a>
-        <div class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+<header>
+<div class="container"><nav>
+<a class="logo" href="#home">TK <span>Web Developer</span></a>
+<div class="nav-links">
+<a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a>
+</div>
+</nav></div>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <span class="tag">WEBSITE DESIGN · DIGITAL GROWTH</span>
-          <h1>Your Business Deserves a <span>Better Website.</span></h1>
-          <p>We create clean, mobile-friendly websites that help businesses present their services, showcase products and receive customer enquiries online.</p>
-          <a class="btn" href="#contact">Discuss Your Website ↗</a>
-          <a class="btn btn-light" href="#services">Explore Services</a>
-        </div>
-        <div class="hero-card">
-          <small>YOUR DIGITAL PRESENCE</small>
-          <h2>Make a Strong First Impression.</h2>
-          <p>Professional design. Clear information. A better experience on mobile and desktop.</p>
-          <div class="mini-grid">
-            <div class="mini"><strong>01</strong><span>Web Design</span></div>
-            <div class="mini"><strong>02</strong><span>SEO Setup</span></div>
-            <div class="mini"><strong>03</strong><span>Product Catalogues</span></div>
-            <div class="mini"><strong>04</strong><span>Business Websites</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div>
+<span class="tag">WEBSITE DESIGN · DIGITAL GROWTH</span>
+<h1>Your Business Deserves a <span>Better Website.</span></h1>
+<p>We create clean, mobile-friendly websites that help businesses showcase products, explain services and receive customer enquiries online.</p>
+<a class="btn" href="#contact">Discuss Your Website ↗</a>
+<a class="btn btn-light" href="#services">Explore Services</a>
+</div>
+<div class="hero-card">
+<small>YOUR DIGITAL PRESENCE</small>
+<h2>Make a Strong First Impression.</h2>
+<p>Professional design, clear information and a better experience on mobile and desktop.</p>
+<div class="mini-grid">
+<div class="mini"><strong>01</strong>Web Design</div>
+<div class="mini"><strong>02</strong>Basic SEO</div>
+<div class="mini"><strong>03</strong>Product Catalogues</div>
+<div class="mini"><strong>04</strong>Business Websites</div>
+</div>
+</div>
+</div></section>
 
-    <section id="services">
-      <div class="container">
-        <div class="section-head">
-          <h2>Services for Your Business</h2>
-          <p>Simple digital solutions for shops, manufacturers, wholesalers and growing businesses.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="icon">✦</div><h3>Business Website</h3><p>Show your business details, services, location and contact information in a professional layout.</p></article>
-          <article class="card"><div class="icon">▦</div><h3>Product Catalogue</h3><p>Display your products in an organised catalogue so customers can explore and enquire.</p></article>
-          <article class="card"><div class="icon">⌕</div><h3>Basic SEO Setup</h3><p>Page titles, descriptions and help with Google Search Console and indexing requests.</p></article>
-        </div>
-      </div>
-    </section>
+<section id="services"><div class="container">
+<div class="section-head"><h2>Services for Your Business</h2><p>Digital solutions for shops, manufacturers, wholesalers and growing businesses.</p></div>
+<div class="cards">
+<article class="card"><div class="icon">✦</div><h3>Business Website</h3><p>Show business details, services and contact information in a professional layout.</p></article>
+<article class="card"><div class="icon">▦</div><h3>Product Catalogue</h3><p>Display products so customers can browse and enquire about your items.</p></article>
+<article class="card"><div class="icon">⌕</div><h3>Basic SEO Setup</h3><p>Page titles, descriptions and guidance for Google Search Console.</p></article>
+</div></div></section>
 
-    <section id="pricing">
-      <div class="container">
-        <div class="section-head">
-          <h2>Website Packages</h2>
-          <p>Starting prices for sample packages. Final price depends on features and content.</p>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <h3>Starter Website</h3><p>For a simple online introduction.</p>
-            <div class="price">₹1,499+</div>
-            <p>One-page layout<br>Mobile-friendly design<br>Contact section</p>
-          </article>
-          <article class="card">
-            <h3>Business Website</h3><p>For businesses needing more details.</p>
-            <div class="price">₹3,999+</div>
-            <p>Multiple sections or pages<br>Services and contact details<br>Basic SEO setup</p>
-          </article>
-          <article class="card">
-            <h3>Product Catalogue</h3><p>For wholesalers and manufacturers.</p>
-            <div class="price">₹5,999+</div>
-            <p>Product showcase<br>Enquiry options<br>Mobile-friendly design</p>
-          </article>
-        </div>
-        <p class="note" style="text-align:center;margin-top:18px;">Illustrative starting prices. Confirm scope, hosting and ongoing costs with each customer before accepting an order.</p>
-      </div>
-    </section>
+<section id="pricing"><div class="container">
+<div class="section-head"><h2>Website Packages</h2><p>Starting prices; final pricing depends on features and content.</p></div>
+<div class="cards">
+<article class="card"><h3>Starter Website</h3><p>For a simple online introduction.</p><div class="price">₹1,499+</div><p>One-page layout<br>Mobile-friendly design<br>Contact section</p></article>
+<article class="card"><h3>Business Website</h3><p>For businesses needing more details.</p><div class="price">₹3,999+</div><p>Multiple sections<br>Services and contact details<br>Basic SEO setup</p></article>
+<article class="card"><h3>Product Catalogue</h3><p>For wholesalers and manufacturers.</p><div class="price">₹5,999+</div><p>Product showcase<br>Enquiry options<br>Mobile-friendly design</p></article>
+</div>
+<p style="text-align:center;font-size:12px;color:#74665a;margin-top:18px">Starting prices only. Confirm scope and costs with each customer.</p>
+</div></section>
 
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <div class="section-head">
-          <h2>Demo Portfolio</h2>
-          <p>Sample concepts to demonstrate different website styles. These are demo projects, not client testimonials.</p>
-        </div>
-        <div class="cards">
-          <article class="project"><h3>Textile & Wholesale</h3><p>A product catalogue concept for textile suppliers and manufacturers.</p></article>
-          <article class="project"><h3>Fashion & Retail</h3><p>A modern showcase for clothing shops and retail businesses.</p></article>
-          <article class="project"><h3>Local Business</h3><p>A clear business website with services, location and enquiry details.</p></article>
-        </div>
-      </div>
-    </section>
+<section class="portfolio" id="portfolio"><div class="container">
+<div class="section-head"><h2>Demo Portfolio</h2><p>Sample concepts to demonstrate website styles; these are not client testimonials.</p></div>
+<div class="cards">
+<article class="project"><h3>Textile & Wholesale</h3><p>A product catalogue concept for textile suppliers and manufacturers.</p></article>
+<article class="project"><h3>Fashion & Retail</h3><p>A modern showcase for clothing shops and retail businesses.</p></article>
+<article class="project"><h3>Local Business</h3><p>A business website with services and enquiry details.</p></article>
+</div></div></section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <h2>Let's Build Your Website</h2>
-          <p>Tell us about your business and the website you need.</p>
-          <a class="btn" href="https://wa.me/?text=Hello%2C%20I%20am%20interested%20in%20a%20business%20website.">Enquire on WhatsApp ↗</a>
-          <p style="font-size:12px;margin-bottom:0;">Replace this WhatsApp link with your business number before publishing.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">© <span id="year"></span> Lucky Web Developer. All rights reserved.</div>
-  </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<section id="contact"><div class="container">
+<div class="contact-box">
+<h2>Let's Build Your Website</h2>
+<p>Tell us about your business and the website you need.</p>
+<a class="btn" href="https://wa.me/919016249230?text=Hello%20TK%20Web%20Developer%2C%20I%20want%20a%20website." target="_blank" rel="noopener">WhatsApp Par Contact Karein ↗</a>
+</div>
 
 <form id="enquiryForm">
-  <label>Your Name</label>
-  <input id="customerName" required placeholder="Apna naam"
-    style="box-sizing:border-box;width:100%;padding:12px;margin:8px 0 16px;">
-
-  <label>Mobile Number</label>
-  <input id="customerMobile" type="tel" required placeholder="Mobile number"
-    style="box-sizing:border-box;width:100%;padding:12px;margin:8px 0 16px;">
-
-  <label>Website Type</label>
-  <select id="websiteType" required
-    style="box-sizing:border-box;width:100%;padding:12px;margin:8px 0 16px;">
-    <option value="">Select karein</option>
-    <option>Business Website</option>
-    <option>Online Store</option>
-    <option>Portfolio Website</option>
-    <option>Other</option>
-  </select>
-
-  <label>Budget Aur Requirement</label>
-  <textarea id="requirements" required placeholder="Budget aur website ki details"
-    style="box-sizing:border-box;width:100%;padding:12px;margin:8px 0 16px;min-height:100px;"></textarea>
-
-  <button type="submit"
-    style="width:100%;padding:14px;background:#25D366;color:white;border:0;border-radius:8px;font-weight:bold;">
-    WhatsApp Par Enquiry Bhejein
-  </button>
+<h3>Website Enquiry Form</h3>
+<label for="customerName">Your Name</label>
+<input id="customerName" required placeholder="Apna naam">
+<label for="customerMobile">Mobile Number</label>
+<input id="customerMobile" type="tel" required placeholder="Mobile number">
+<label for="websiteType">Website Type</label>
+<select id="websiteType" required>
+<option value="">Select karein</option><option>Business Website</option><option>Online Store</option><option>Portfolio Website</option><option>Other</option>
+</select>
+<label for="requirements">Budget Aur Requirement</label>
+<textarea id="requirements" required placeholder="Budget aur website ki details"></textarea>
+<button type="submit">WhatsApp Par Enquiry Bhejein</button>
 </form>
+</div></section>
+</main>
+
+<footer><div class="container">© <span id="year"></span> TK Web Developer. All rights reserved.</div></footer>
+
+<a class="whatsapp-float" href="https://wa.me/919016249230?text=Hello%20TK%20Web%20Developer%2C%20I%20want%20a%20website." target="_blank" rel="noopener">WhatsApp</a>
 
 <script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
 document.getElementById("enquiryForm").addEventListener("submit", function(e) {
   e.preventDefault();
-
   const name = document.getElementById("customerName").value.trim();
   const mobile = document.getElementById("customerMobile").value.trim();
   const type = document.getElementById("websiteType").value;
   const requirements = document.getElementById("requirements").value.trim();
 
-  const message =
-    "New Website Enquiry - TK Web Developer\n\n" +
+  const message = "New Website Enquiry - TK Web Developer\n\n" +
     "Customer Name: " + name + "\n" +
     "Mobile Number: " + mobile + "\n" +
     "Website Type: " + type + "\n" +
     "Budget / Requirement: " + requirements;
 
-  const url = "https://wa.me/919016249230?text=" +
-    encodeURIComponent(message);
-
+  const url = "https://wa.me/919016249230?text=" + encodeURIComponent(message);
   window.open(url, "_blank");
 });
 </script>
