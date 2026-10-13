@@ -4,38 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050816">
-  <meta name="description" content="TK Web Developer creates modern, responsive websites for businesses and creators.">
   <meta name="google-site-verification" content="dgvF9jSoVSToI_-_uWd2cmb5uHjFuZzM4Q3_eCsNJPQ">
-  <title>TK Web Developer | Ideas to Digital Reality</title>
+  <meta name="theme-color" content="#070b18">
+  <meta name="description" content="TK Web Developer — futuristic websites, modern design, responsive development and affordable website packages in Ahmedabad, Gujarat.">
+  <meta name="keywords" content="TK Web Developer, website developer Ahmedabad, web design, responsive website, business website">
+  <meta name="author" content="TK Web Developer">
+  <title>TK Web Developer | Build Your Digital Future</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #040711;
-      --panel: rgba(9,18,39,.85);
-      --line: rgba(58,151,255,.35);
-      --blue: #22d3ff;
-      --purple: #9b5cff;
-      --text: #f4f8ff;
-      --muted: #a7b6d0;
-      --green: #20d98b;
+      --bg: #070b18;
+      --bg2: #0b1022;
+      --panel: rgba(17, 25, 49, .72);
+      --text: #f4f7ff;
+      --muted: #a7b0ca;
+      --cyan: #45e7ff;
+      --purple: #9b78ff;
+      --pink: #ff65cf;
+      --line: rgba(255,255,255,.11);
+      --radius: 22px;
+      --max: 1160px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 88px;
     }
 
     body {
-      font-family: Inter, Arial, sans-serif;
-      background: var(--bg);
+      font-family: Inter, sans-serif;
+      background:
+        radial-gradient(ellipse at 12% 12%, rgba(69,231,255,.08), transparent 34%),
+        radial-gradient(ellipse at 88% 30%, rgba(155,120,255,.09), transparent 35%),
+        var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       overflow-x: hidden;
     }
 
@@ -43,42 +52,117 @@
       content: "";
       position: fixed;
       inset: 0;
-      z-index: -2;
       pointer-events: none;
-      background:
-        radial-gradient(ellipse at 75% 10%, rgba(38,92,255,.18), transparent 40%),
-        radial-gradient(ellipse at 10% 60%, rgba(128,39,255,.13), transparent 35%),
-        linear-gradient(180deg,#030611,#050a18,#030611);
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
       z-index: -1;
-      pointer-events: none;
-      opacity: .18;
+      opacity: .16;
       background-image:
-        linear-gradient(rgba(45,133,255,.1) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(45,133,255,.1) 1px,transparent 1px);
-      background-size: 45px 45px;
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
     }
 
     a { color: inherit; text-decoration: none; }
     button, input, textarea, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { color: inherit; }
+    img { max-width: 100%; display: block; }
 
-    .wrap {
-      width: min(1160px, calc(100% - 36px));
-      margin: auto;
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
     }
 
-    .nav {
+    .section { padding: 100px 0; position: relative; }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--cyan);
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan);
+    }
+
+    h1, h2, h3, .logo {
+      font-family: "Space Grotesk", sans-serif;
+      line-height: 1.12;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      letter-spacing: -1.5px;
+    }
+
+    .section-heading p {
+      margin-top: 16px;
+      color: var(--muted);
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, var(--cyan), #a2a2ff 48%, var(--pink));
+      background-size: 220% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: gradientFlow 7s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0%,100% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+    }
+
+    /* Animated background canvas */
+    #particleCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      opacity: .7;
+    }
+
+    .pointer-glow {
+      position: fixed;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(69,231,255,.09), rgba(155,120,255,.045) 38%, transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 30%;
+    }
+
+    /* Navigation */
+    .navbar {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(3,7,18,.9);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      background: rgba(7,11,24,.78);
       backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--line);
+      -webkit-backdrop-filter: blur(18px);
     }
 
     .nav-inner {
@@ -86,1155 +170,1451 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 900;
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -.8px;
+      white-space: nowrap;
     }
 
-    .brand-mark {
-      font-size: 2rem;
-      color: var(--blue);
-      font-style: italic;
-      text-shadow: 0 0 20px var(--blue);
-    }
-
-    .brand small {
-      display: block;
-      color: var(--muted);
-      font-size: .65rem;
-      font-weight: 500;
+    .logo-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      margin-right: 7px;
+      border-radius: 10px;
+      color: #06101c;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      box-shadow: 0 0 22px rgba(69,231,255,.22);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 27px;
     }
 
     .nav-links a {
-      color: #d8e7fc;
-      font-size: .85rem;
-      transition: color .2s;
+      color: #c2c9dd;
+      font-size: .88rem;
+      transition: color .25s ease;
     }
 
-    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover { color: var(--cyan); }
 
-    .menu-btn {
+    .menu-toggle {
       display: none;
-      color: white;
-      background: transparent;
+      width: 44px;
+      height: 42px;
       border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 8px 12px;
+      background: var(--panel);
+      border-radius: 12px;
       cursor: pointer;
+      font-size: 1.3rem;
     }
 
-    .gradient {
-      background: linear-gradient(100deg,#fff,#69e1ff,#9f7aff,#fff);
-      background-size: 220% auto;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: gradientShift 7s linear infinite;
-    }
-
-    @keyframes gradientShift {
-      to { background-position: 220% center; }
-    }
-
-    .glow-btn {
+    /* Buttons */
+    .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      gap: 9px;
-      border: 1px solid rgba(77,198,255,.7);
-      border-radius: 999px;
-      padding: 12px 20px;
-      color: white;
+      align-items: center;
+      gap: 10px;
+      min-height: 49px;
+      padding: 13px 21px;
+      border-radius: 13px;
+      font-size: .9rem;
       font-weight: 800;
-      background: linear-gradient(110deg,rgba(20,179,255,.2),rgba(146,67,255,.2));
-      box-shadow: 0 0 20px rgba(39,157,255,.15);
+      border: 1px solid transparent;
       cursor: pointer;
-      transition: .25s;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     }
 
-    .glow-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(34,211,255,.45);
+    .btn:hover { transform: translateY(-3px); }
+
+    .btn-primary {
+      color: #06101a;
+      background: linear-gradient(110deg, var(--cyan), #a1b4ff);
+      box-shadow: 0 8px 28px rgba(69,231,255,.16);
     }
 
-    .primary {
-      background: linear-gradient(105deg,#08bde9,#7653ff);
-      border-color: transparent;
+    .btn-primary:hover {
+      box-shadow: 0 12px 38px rgba(69,231,255,.29);
     }
 
-    .section { padding: 85px 0; }
-
-    .eyebrow {
-      color: var(--blue);
-      font-size: .75rem;
-      font-weight: 800;
-      letter-spacing: .13em;
-      text-transform: uppercase;
+    .btn-glass {
+      color: var(--text);
+      border-color: rgba(255,255,255,.17);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(12px);
     }
 
-    .section-head {
-      max-width: 700px;
-      margin-bottom: 32px;
-    }
+    .btn-glass:hover { border-color: var(--cyan); }
 
-    .section-head h2 {
-      font-size: clamp(2rem,4vw,3.1rem);
-      line-height: 1.15;
-      margin: 12px 0;
-      letter-spacing: -.04em;
-    }
-
-    .section-head p, .muted { color: var(--muted); }
+    .btn-small { min-height: 41px; padding: 9px 15px; font-size: .82rem; }
 
     /* Hero */
-
     .hero {
-      padding: 75px 0;
-      min-height: 620px;
-      display: grid;
+      min-height: calc(100svh - 76px);
+      display: flex;
       align-items: center;
+      padding: 78px 0 84px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.06fr .94fr;
       align-items: center;
-      gap: 35px;
+      gap: 55px;
     }
 
-    .pill {
+    .status-pill {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
+      gap: 10px;
+      border: 1px solid rgba(69,231,255,.23);
+      border-radius: 999px;
       padding: 8px 13px;
-      border: 1px solid var(--line);
-      border-radius: 99px;
-      background: rgba(5,18,39,.7);
-      font-size: .78rem;
+      background: rgba(69,231,255,.055);
+      color: #c5f9ff;
+      font-size: .77rem;
+      margin-bottom: 24px;
     }
 
-    .pulse {
+    .status-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 12px var(--green);
+      background: #65ffb4;
+      box-shadow: 0 0 13px #65ffb4;
+      animation: pulse 1.8s infinite;
     }
 
-    h1 {
-      font-size: clamp(2.8rem,6vw,5rem);
-      line-height: 1;
-      letter-spacing: -.06em;
-      margin: 24px 0 18px;
+    @keyframes pulse {
+      50% { opacity: .45; transform: scale(.8); }
     }
 
-    .type-line {
-      display: block;
-      color: var(--blue);
-      min-height: 1.1em;
-      text-shadow: 0 0 25px rgba(34,211,255,.3);
+    .hero h1 {
+      font-size: clamp(2.7rem, 5.7vw, 5rem);
+      letter-spacing: -3px;
+      line-height: 1.04;
+      max-width: 700px;
     }
 
-    .cursor {
+    .typing-line {
+      min-height: 1.3em;
+      margin-top: 9px;
+      color: var(--cyan);
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-weight: 700;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .typing-cursor {
       display: inline-block;
-      width: 3px;
-      height: .8em;
-      background: var(--purple);
-      margin-left: 5px;
-      animation: blink .8s steps(2,start) infinite;
+      width: 2px;
+      height: .95em;
+      background: var(--pink);
+      margin-left: 4px;
+      vertical-align: -.08em;
+      animation: blink .8s steps(2, start) infinite;
     }
 
     @keyframes blink { to { visibility: hidden; } }
 
     .hero-copy {
+      max-width: 570px;
+      margin-top: 23px;
       color: var(--muted);
-      max-width: 540px;
       font-size: 1.02rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin: 27px 0;
+      gap: 13px;
+      margin-top: 30px;
     }
 
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 17px;
-      color: #d5e5ff;
+    .hero-note {
+      margin-top: 25px;
+      color: #8d98b8;
       font-size: .8rem;
     }
 
-    .trust-row b { color: var(--blue); }
-
     .hero-visual {
-      min-height: 350px;
-      display: grid;
-      place-items: center;
       position: relative;
+      min-width: 0;
+      perspective: 1100px;
     }
 
     .orb {
       position: absolute;
-      width: 300px;
-      height: 300px;
+      width: 260px;
+      height: 260px;
       border-radius: 50%;
-      background: radial-gradient(circle,rgba(44,139,255,.25),rgba(143,49,255,.12),transparent 70%);
-      animation: float 6s ease-in-out infinite;
+      background: linear-gradient(135deg, rgba(69,231,255,.2), rgba(155,120,255,.18), rgba(255,101,207,.1));
+      filter: blur(42px);
+      top: 15%;
+      left: 20%;
+      animation: orbFloat 8s ease-in-out infinite;
     }
 
-    @keyframes float {
-      50% { transform: translateY(-16px) scale(1.04); }
+    @keyframes orbFloat {
+      0%,100% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(25px,-18px) scale(1.1); }
     }
 
     .code-window {
-      width: min(100%,470px);
       position: relative;
-      padding: 20px;
-      border: 1px solid rgba(65,166,255,.5);
+      z-index: 1;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.17);
       border-radius: 22px;
-      background: linear-gradient(145deg,rgba(8,20,44,.97),rgba(12,7,32,.95));
-      box-shadow: 0 0 45px rgba(26,110,255,.2);
-      animation: windowFloat 7s ease-in-out infinite;
+      background: linear-gradient(145deg, rgba(21,31,59,.94), rgba(8,13,29,.95));
+      box-shadow: 0 30px 90px rgba(0,0,0,.35), 0 0 50px rgba(69,231,255,.08);
+      transform: rotateY(-7deg) rotateX(3deg);
+      animation: windowFloat 6s ease-in-out infinite;
     }
 
     @keyframes windowFloat {
-      50% { transform: translateY(-8px); }
+      0%,100% { transform: translateY(0) rotateY(-7deg) rotateX(3deg); }
+      50% { transform: translateY(-10px) rotateY(-4deg) rotateX(1deg); }
     }
 
     .window-top {
+      height: 51px;
       display: flex;
+      align-items: center;
       gap: 7px;
-      padding-bottom: 14px;
+      padding: 0 17px;
       border-bottom: 1px solid var(--line);
-      color: var(--muted);
+      color: #a5b2d0;
       font-size: .75rem;
     }
 
-    .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #ff6584;
-    }
+    .window-dot { width: 9px; height: 9px; border-radius: 50%; }
+    .window-dot:nth-child(1) { background: #ff6685; }
+    .window-dot:nth-child(2) { background: #ffd166; }
+    .window-dot:nth-child(3) { background: #63e6be; }
+    .window-file { margin-left: auto; }
 
-    .dot:nth-child(2) { background: #ffc857; }
-    .dot:nth-child(3) { background: #3be6a3; }
-
-    .window-title { margin-left: auto; }
-
-    .code-lines {
-      padding: 18px 0 8px;
-      font: .85rem/2 monospace;
-      color: #b8c9e7;
-    }
-
-    .code-lines .blue { color: #45d8ff; }
-    .code-lines .purple { color: #c7a0ff; }
-    .code-lines .green { color: #8af2be; }
-    .indent { padding-left: 22px; }
-
-    .mini-card {
-      position: absolute;
-      padding: 12px 15px;
-      background: rgba(5,14,32,.96);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      font-size: .75rem;
-      animation: float 5s ease-in-out infinite;
-    }
-
-    .mini-card strong {
-      display: block;
-      color: var(--blue);
-    }
-
-    .mini-one { left: -5px; top: 45px; }
-    .mini-two { right: -5px; bottom: 35px; }
-
-    /* Service cards */
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 17px;
-    }
-
-    .card {
-      padding: 24px;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: linear-gradient(145deg,rgba(10,22,46,.9),rgba(6,10,25,.9));
-      transition: transform .25s,box-shadow .25s,border-color .25s;
-      position: relative;
+    .code-content {
+      padding: 28px 24px 32px;
+      font-family: Consolas, monospace;
+      font-size: clamp(.72rem, 1.4vw, .9rem);
+      line-height: 2;
+      color: #cbd5f2;
       overflow: hidden;
     }
 
-    .card:hover {
-      transform: translateY(-7px);
-      border-color: var(--blue);
-      box-shadow: 0 0 28px rgba(34,211,255,.15);
+    .code-line { white-space: nowrap; }
+    .code-number { display: inline-block; width: 28px; color: #647293; }
+    .code-blue { color: #7cd9ff; }
+    .code-purple { color: #c5a3ff; }
+    .code-green { color: #8de9ba; }
+    .code-pink { color: #ff9fdf; }
+
+    .floating-chip {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 15px;
+      background: rgba(13,21,42,.88);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 15px;
+      box-shadow: 0 15px 38px rgba(0,0,0,.22);
+      backdrop-filter: blur(15px);
+      animation: chipFloat 5s ease-in-out infinite;
     }
 
-    .icon {
-      display: inline-grid;
-      place-items: center;
-      width: 45px;
-      height: 45px;
-      border-radius: 13px;
-      color: var(--blue);
-      font-size: 1.3rem;
-      background: rgba(34,211,255,.1);
-      border: 1px solid var(--line);
-    }
-
-    .card h3 { margin: 16px 0 8px; }
-    .card p { color: var(--muted); font-size: .9rem; }
-
-    .card-link {
-      display: inline-block;
-      margin-top: 17px;
-      color: var(--blue);
-      font-weight: 800;
-      font-size: .85rem;
-    }
-
-    /* About */
-
-    .split {
+    .chip-icon {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(69,231,255,.1);
+      color: var(--cyan);
+      font-size: 1.1rem;
+    }
+
+    .floating-chip strong { display: block; font-size: .79rem; }
+    .floating-chip small { display: block; color: var(--muted); font-size: .68rem; }
+    .chip-one { top: 5%; right: -5%; }
+    .chip-two { bottom: 5%; left: -8%; animation-delay: -2s; }
+
+    @keyframes chipFloat {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-11px); }
+    }
+
+    /* Trust strip */
+    .trust-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.018);
+      padding: 24px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .trust-item strong { display: block; font-size: .95rem; }
+    .trust-item span { color: var(--muted); font-size: .77rem; }
+
+    /* Cards and grids */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap: 22px;
     }
 
-    .glass-panel {
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: var(--panel);
-      padding: 28px;
-    }
-
-    .glass-panel h2 {
-      font-size: clamp(1.8rem,3vw,2.5rem);
-      line-height: 1.15;
-      margin: 12px 0;
-    }
-
-    .check-list {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .check-list li {
-      display: flex;
-      gap: 10px;
-      color: #d9e6fa;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      color: var(--green);
-      font-weight: 900;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
-      margin-top: 20px;
-    }
-
-    .stat {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      background: rgba(3,10,24,.6);
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--blue);
-      font-size: 1.7rem;
-    }
-
-    .stat span { color: var(--muted); font-size: .82rem; }
-
-    /* Portfolio */
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 17px;
-    }
-
-    .project {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--panel);
-      transition: .25s;
-    }
-
-    .project:hover { transform: translateY(-5px); }
-
-    .project-art {
-      height: 180px;
-      display: grid;
-      place-items: center;
-      background: radial-gradient(circle,rgba(34,211,255,.2),transparent 60%),linear-gradient(135deg,#07152c,#130d2c);
+    .glass-card {
       position: relative;
       overflow: hidden;
+      isolation: isolate;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(20,29,55,.76), rgba(11,16,34,.75));
+      box-shadow: 0 18px 45px rgba(0,0,0,.1);
+      transform-style: preserve-3d;
+      transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
     }
 
-    .project-art::before {
+    .glass-card::before {
       content: "";
       position: absolute;
-      width: 160px;
-      height: 160px;
-      border: 1px solid rgba(34,211,255,.35);
-      border-radius: 30%;
-      transform: rotate(35deg);
+      z-index: -1;
+      inset: 0;
+      opacity: 0;
+      background: radial-gradient(340px circle at var(--mx,50%) var(--my,50%), rgba(69,231,255,.12), transparent 45%);
+      transition: opacity .3s ease;
     }
 
-    .project-art span {
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: white;
-      text-shadow: 0 0 20px var(--blue);
+    .glass-card:hover {
+      border-color: rgba(69,231,255,.35);
+      box-shadow: 0 24px 60px rgba(0,0,0,.24), 0 0 28px rgba(69,231,255,.055);
+    }
+
+    .glass-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(69,231,255,.2);
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(69,231,255,.13), rgba(155,120,255,.12));
+      font-size: 1.5rem;
+    }
+
+    .glass-card h3 { font-size: 1.22rem; margin-bottom: 12px; }
+    .glass-card p { color: var(--muted); font-size: .9rem; }
+    .feature-list { list-style: none; margin-top: 19px; }
+    .feature-list li { color: #cbd3e8; font-size: .84rem; margin-top: 9px; }
+    .feature-list li::before { content: "✦"; color: var(--cyan); margin-right: 9px; }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 350px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(69,231,255,.14), transparent 34%),
+        linear-gradient(145deg, rgba(20,29,55,.8), rgba(9,14,29,.8));
+    }
+
+    .about-visual::before, .about-visual::after {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border: 1px solid rgba(69,231,255,.28);
+      border-radius: 50%;
+      animation: spin 18s linear infinite;
+    }
+
+    .about-visual::after {
+      width: 300px;
+      height: 300px;
+      border-color: rgba(155,120,255,.24);
+      animation-direction: reverse;
+      animation-duration: 24s;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .about-monogram {
+      position: relative;
       z-index: 1;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 5.5rem;
+      font-weight: 800;
+      letter-spacing: -7px;
+      color: var(--text);
+      text-shadow: 0 0 35px rgba(69,231,255,.32);
     }
 
-    .project-body { padding: 19px; }
-    .project-body p { color: var(--muted); font-size: .85rem; margin-top: 6px; }
-    .sample-note { color: var(--muted); font-size: .76rem; margin-top: 18px; }
+    .about-content h2 { margin-bottom: 20px; }
+    .about-content > p { color: var(--muted); margin-bottom: 15px; }
+    .about-points { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 25px 0; }
+    .about-point {
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 13px;
+      color: #dce4f7;
+      font-size: .84rem;
+      background: rgba(255,255,255,.025);
+    }
+    .about-point span { color: var(--cyan); margin-right: 7px; }
+
+    /* Portfolio */
+    .portfolio-card { padding: 0; }
+    .portfolio-art {
+      min-height: 205px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background: radial-gradient(circle at 50% 20%, rgba(69,231,255,.12), transparent 60%), #0c142a;
+    }
+
+    .mock-browser {
+      width: 100%;
+      max-width: 310px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.19);
+      border-radius: 10px;
+      background: #121c35;
+      transform: rotate(-3deg);
+      box-shadow: 0 15px 30px rgba(0,0,0,.3);
+      transition: transform .35s ease;
+    }
+
+    .portfolio-card:hover .mock-browser { transform: rotate(0) scale(1.04); }
+    .mock-top { padding: 8px; border-bottom: 1px solid var(--line); color: #94a5c8; font-size: .55rem; }
+    .mock-body { padding: 18px; min-height: 125px; }
+    .mock-title { font: 700 1rem "Space Grotesk"; margin-bottom: 7px; }
+    .mock-sub { font-size: .58rem; color: #aab7d2; margin-bottom: 12px; }
+    .mock-btn { display: inline-block; border-radius: 4px; padding: 5px 9px; background: var(--cyan); color: #07101c; font-size: .55rem; font-weight: 800; }
+    .mock-lines { display: flex; gap: 6px; margin-top: 15px; }
+    .mock-lines span { height: 24px; flex: 1; border-radius: 4px; background: rgba(155,120,255,.23); }
+    .portfolio-info { padding: 23px; }
+    .portfolio-info p { margin-top: 8px; }
+    .sample-label { display: inline-block; margin-top: 14px; padding: 5px 9px; border: 1px solid var(--line); border-radius: 7px; color: #bac6df; font-size: .69rem; }
+
+    /* Process */
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+    .process-step { padding: 24px 20px; border-top: 1px solid rgba(69,231,255,.32); background: rgba(255,255,255,.02); border-radius: 0 0 16px 16px; }
+    .process-number { color: var(--cyan); font: 700 1.8rem "Space Grotesk"; margin-bottom: 15px; }
+    .process-step h3 { font-size: 1.05rem; margin-bottom: 9px; }
+    .process-step p { color: var(--muted); font-size: .83rem; }
 
     /* Pricing */
-
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 17px;
-      align-items: stretch;
+    .pricing-card { display: flex; flex-direction: column; }
+    .pricing-card.featured {
+      border-color: rgba(69,231,255,.5);
+      box-shadow: 0 0 45px rgba(69,231,255,.08);
     }
 
-    .price-card {
-      padding: 26px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: linear-gradient(155deg,rgba(9,23,47,.95),rgba(9,7,27,.95));
-      position: relative;
-    }
-
-    .price-card.featured {
-      border-color: var(--purple);
-      box-shadow: 0 0 30px rgba(111,71,255,.15);
-      transform: translateY(-6px);
-    }
-
-    .popular {
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      background: linear-gradient(100deg,#16bfea,#8757ff);
-      padding: 4px 9px;
-      border-radius: 99px;
-      font-size: .65rem;
+    .popular-label {
+      align-self: flex-start;
+      color: #07101c;
+      background: linear-gradient(90deg,var(--cyan),#a1b4ff);
+      border-radius: 6px;
+      padding: 5px 9px;
+      margin-bottom: 15px;
+      font-size: .7rem;
       font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .7px;
     }
 
-    .price { font-size: 2.2rem; font-weight: 900; margin: 10px 0; }
-    .price small { color: var(--muted); font-size: .75rem; font-weight: 500; }
-    .price-card p { color: var(--muted); font-size: .88rem; }
-    .price-card .check-list { min-height: 150px; font-size: .86rem; }
-    .price-card .glow-btn { width: 100%; margin-top: 14px; }
+    .price { font: 800 2.4rem "Space Grotesk"; margin: 19px 0 6px; }
+    .price small { color: var(--muted); font: 500 .8rem Inter,sans-serif; }
+    .pricing-card .feature-list { flex: 1; margin-bottom: 25px; }
+    .pricing-card .btn { width: 100%; }
+
+    .pricing-note {
+      color: var(--muted);
+      font-size: .82rem;
+      text-align: center;
+      margin-top: 25px;
+    }
 
     /* Contact */
-
     .contact-grid {
       display: grid;
       grid-template-columns: .85fr 1.15fr;
-      gap: 23px;
+      gap: 30px;
+      align-items: start;
     }
 
-    .contact-details {
-      display: grid;
-      gap: 12px;
-      margin-top: 22px;
-    }
+    .contact-info { padding: 30px; }
+    .contact-info h3 { font-size: 1.5rem; margin-bottom: 12px; }
+    .contact-info > p { color: var(--muted); margin-bottom: 25px; }
+    .contact-detail { display: flex; gap: 13px; margin-top: 19px; align-items: flex-start; }
+    .contact-detail .service-icon { width: 43px; height: 43px; flex: 0 0 43px; margin: 0; font-size: 1.1rem; }
+    .contact-detail strong { display: block; font-size: .86rem; }
+    .contact-detail a, .contact-detail span { display: block; color: var(--muted); font-size: .82rem; overflow-wrap: anywhere; }
+    .contact-detail a:hover { color: var(--cyan); }
 
-    .contact-item {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      padding: 13px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(5,12,29,.6);
-    }
-
-    .contact-item small {
-      display: block;
-      color: var(--muted);
-      overflow-wrap: anywhere;
-    }
-
-    form { display: grid; gap: 14px; }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
-    }
-
-    label {
-      display: block;
-      color: #d8e7fc;
-      font-size: .82rem;
-      font-weight: 700;
-      margin-bottom: 7px;
-    }
-
-    input,textarea,select {
+    .contact-form { padding: 30px; }
+    .contact-form h3 { font-size: 1.45rem; margin-bottom: 8px; }
+    .contact-form > p { color: var(--muted); font-size: .86rem; margin-bottom: 23px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: .81rem; color: #d5dcef; }
+    .field input, .field textarea, .field select {
       width: 100%;
-      border: 1px solid rgba(85,143,230,.4);
-      border-radius: 12px;
-      background: rgba(2,8,21,.85);
-      color: white;
-      padding: 13px;
+      min-height: 48px;
+      padding: 12px 13px;
+      color: var(--text);
+      background: rgba(4,9,22,.75);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 11px;
       outline: none;
+      transition: border-color .2s, box-shadow .2s;
     }
 
-    input:focus,textarea:focus,select:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(34,211,255,.1);
+    .field select option { background: #0b1022; }
+    .field textarea { min-height: 115px; resize: vertical; }
+    .field input:focus, .field textarea:focus, .field select:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(69,231,255,.08);
     }
 
-    textarea { resize: vertical; min-height: 110px; }
-    select option { background: #081329; }
-    .form-help { color: var(--muted); font-size: .76rem; }
+    .contact-form .btn { width: 100%; }
+    .form-disclaimer { margin-top: 13px; color: #8996b5; font-size: .72rem; text-align: center; }
 
-    /* Footer and floating buttons */
-
-    footer {
-      padding: 28px 0;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: .82rem;
+    /* CTA and footer */
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 58px 28px;
+      border: 1px solid rgba(69,231,255,.23);
+      border-radius: 28px;
+      background:
+        radial-gradient(ellipse at 15% 0%, rgba(69,231,255,.12), transparent 48%),
+        radial-gradient(ellipse at 90% 100%, rgba(155,120,255,.14), transparent 48%),
+        rgba(13,20,41,.75);
     }
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+    .cta-panel h2 { max-width: 700px; margin: 0 auto; }
+    .cta-panel p { max-width: 590px; margin: 17px auto 25px; color: var(--muted); }
 
-    .footer-links { display: flex; gap: 15px; flex-wrap: wrap; }
-    .footer-links a:hover { color: var(--blue); }
+    footer { border-top: 1px solid var(--line); padding: 30px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-copy { color: #929db9; font-size: .78rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 19px; font-size: .8rem; color: #b5c0d9; }
+    .footer-links a:hover { color: var(--cyan); }
 
-    .float-wa,.top-btn {
+    .whatsapp-float {
       position: fixed;
-      bottom: 20px;
-      z-index: 15;
-      width: 52px;
-      height: 52px;
+      z-index: 900;
+      right: 22px;
+      bottom: 22px;
       display: grid;
       place-items: center;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
-      font-size: 1.3rem;
-      transition: .2s;
+      color: #06150d;
+      background: #4df0a5;
+      font-size: 1.65rem;
+      box-shadow: 0 8px 28px rgba(77,240,165,.25);
+      transition: transform .25s ease;
     }
 
-    .float-wa {
-      right: 20px;
-      color: #04140c;
-      background: #18c878;
-      box-shadow: 0 0 25px rgba(24,200,120,.25);
-    }
+    .whatsapp-float:hover { transform: translateY(-4px) scale(1.04); }
 
-    .top-btn {
-      left: 20px;
-      color: var(--blue);
-      background: #081b38;
+    .back-top {
+      position: fixed;
+      right: 28px;
+      bottom: 91px;
+      z-index: 900;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       border: 1px solid var(--line);
+      background: rgba(13,20,41,.9);
+      cursor: pointer;
       opacity: 0;
       pointer-events: none;
-      cursor: pointer;
+      transform: translateY(10px);
+      transition: .25s ease;
     }
 
-    .top-btn.show { opacity: 1; pointer-events: auto; }
+    .back-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
+    /* Scroll reveal */
     .reveal {
       opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .65s ease,transform .65s ease;
+      transform: translateY(24px);
+      transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);
     }
 
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: .08s; }
+    .delay-2 { transition-delay: .16s; }
+    .delay-3 { transition-delay: .24s; }
 
-    @media(max-width:900px) {
-      .cards,.pricing,.projects { grid-template-columns: repeat(2,1fr); }
-      .nav-links { gap: 12px; }
-      .nav-links a { font-size: .78rem; }
+    /* Accessibility */
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+
+    @media (max-width: 980px) {
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: .82rem; }
+      .hero-grid { gap: 30px; }
+      .chip-one { right: -2%; }
+      .chip-two { left: -2%; }
+      .grid-3 { gap: 16px; }
+      .glass-card { padding: 22px; }
+      .process-grid { grid-template-columns: repeat(2,1fr); }
     }
 
-    @media(max-width:700px) {
-      .wrap { width: calc(100% - 28px); }
-      .section { padding: 65px 0; }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 30px, var(--max)); }
+      .section { padding: 75px 0; }
       .nav-inner { min-height: 68px; }
-      .menu-btn { display: block; }
-      .nav-cta { display: none; }
-
+      .menu-toggle { display: block; }
       .nav-links {
         display: none;
         position: absolute;
-        top: 68px;
+        top: calc(100% + 1px);
         left: 0;
         right: 0;
-        padding: 16px 22px;
-        background: #030712;
-        border-bottom: 1px solid var(--line);
+        padding: 18px 20px 22px;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
+        background: rgba(7,11,24,.97);
+        border-bottom: 1px solid var(--line);
       }
 
       .nav-links.open { display: flex; }
-      .nav-links a { padding: 12px 3px; font-size: .95rem; }
-
-      .hero { padding: 55px 0; min-height: 0; }
-      .hero-grid,.split,.contact-grid { grid-template-columns: 1fr; }
-      .hero-visual { min-height: 320px; margin-top: 15px; }
-      .mini-one { left: 0; }
-      .mini-two { right: 0; }
-
-      .cards,.pricing,.projects { grid-template-columns: 1fr; }
-      .price-card.featured { transform: none; }
-      .form-row { grid-template-columns: 1fr; }
-      .glass-panel { padding: 22px; }
-      h1 { font-size: clamp(2.7rem,13vw,4.4rem); }
+      .nav-links a { padding: 13px 5px; font-size: .95rem; }
+      .nav-links .btn { margin-top: 9px; }
+      .hero { min-height: auto; padding: 66px 0 76px; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 58px; }
+      .hero h1 { letter-spacing: -1.8px; }
+      .hero-visual { width: min(100%, 540px); margin: auto; }
+      .code-window { transform: none; animation: none; }
+      .chip-one { right: -1%; top: -6%; }
+      .chip-two { left: -1%; bottom: -7%; }
+      .trust-grid { grid-template-columns: repeat(2,1fr); row-gap: 24px; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .glass-card { padding: 25px; }
+      .about-grid { gap: 35px; }
+      .about-visual { min-height: 290px; }
+      .contact-grid { gap: 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .pointer-glow { display: none; }
     }
 
-    @media(prefers-reduced-motion:reduce) {
-      *,*::before,*::after {
-        scroll-behavior: auto !important;
+    @media (max-width: 480px) {
+      .logo { font-size: 1.2rem; }
+      .logo-mark { width: 30px; height: 30px; }
+      .hero h1 { font-size: clamp(2.55rem, 12vw, 3.5rem); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { width: 100%; }
+      .code-content { padding: 22px 12px; font-size: .68rem; }
+      .code-number { width: 22px; }
+      .floating-chip { padding: 9px 11px; }
+      .chip-icon { width: 29px; height: 29px; }
+      .floating-chip strong { font-size: .72rem; }
+      .floating-chip small { font-size: .62rem; }
+      .about-points, .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .contact-form, .contact-info { padding: 22px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .cta-panel { padding: 42px 20px; }
+      .footer-links { gap: 14px; }
+      .whatsapp-float { right: 15px; bottom: 15px; }
+      .back-top { right: 22px; bottom: 81px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
         transition-duration: .01ms !important;
       }
       .reveal { opacity: 1; transform: none; }
+      #particleCanvas, .pointer-glow { display: none; }
     }
   </style>
 </head>
 
 <body>
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="#home">
-      <span class="brand-mark">TK</span>
-      <span>WEB DEVELOPER<small>Ideas to Digital Reality</small></span>
-    </a>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="pointer-glow" id="pointerGlow" aria-hidden="true"></div>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#home" aria-label="TK Web Developer home">
+        <span class="logo-mark">TK</span> Web Developer
+      </a>
 
-    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
 
-    <a class="glow-btn nav-cta" href="#contact">Hire Me ↗</a>
-  </div>
-</header>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="btn btn-primary btn-small">Let's Talk ↗</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="pill"><span class="pulse"></span> Available for website projects</span>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill"><span class="status-dot"></span> Creative Web Development</div>
 
-        <h1>
-          Build Your Dream
-          <span class="type-line"><span id="typedText">Website Today</span><span class="cursor" aria-hidden="true"></span></span>
-        </h1>
+          <h1>Build Your <span class="gradient-text">Digital Future.</span></h1>
+          <div class="typing-line"><span id="typingText">Modern Websites</span><span class="typing-cursor"></span></div>
 
-        <p class="hero-copy">
-          I create professional, modern and responsive websites that help
-          businesses build a powerful online presence.
-        </p>
+          <p class="hero-copy">
+            We create modern, responsive and visually powerful websites that help businesses build their online presence and present their ideas with confidence.
+          </p>
 
-        <div class="hero-actions">
-          <a class="glow-btn primary" href="#contact">Start Your Project ↗</a>
-          <a class="glow-btn" href="#portfolio">Explore Portfolio ↓</a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start Your Project <span>↗</span></a>
+            <a class="btn btn-glass" href="#portfolio">Explore Designs ↓</a>
+          </div>
+
+          <p class="hero-note">✦ Modern design &nbsp; ✦ Mobile-friendly &nbsp; ✦ Clear communication</p>
         </div>
 
-        <div class="trust-row">
-          <span><b>✦</b> Mobile friendly</span>
-          <span><b>✦</b> Modern design</span>
-          <span><b>✦</b> Clear pricing</span>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="orb"></div>
-        <div class="code-window">
-          <div class="window-top">
-            <i class="dot"></i><i class="dot"></i><i class="dot"></i>
-            <span class="window-title">tk-creative / website.js</span>
-          </div>
-          <div class="code-lines">
-            <div><span class="purple">const</span> <span class="blue">dream</span> = {</div>
-            <div class="indent">design: <span class="green">'beautiful'</span>,</div>
-            <div class="indent">performance: <span class="green">'fast'</span>,</div>
-            <div class="indent">responsive: <span class="purple">true</span>,</div>
-            <div class="indent">ideas: <span class="green">'limitless'</span></div>
-            <div>};</div><br>
-            <div><span class="blue">buildWebsite</span>(dream);</div>
-            <div><span class="purple">// Your idea. Your digital future.</span></div>
-          </div>
-        </div>
-        <div class="mini-card mini-one">✦ DESIGN QUALITY<strong>Premium feel</strong></div>
-        <div class="mini-card mini-two">⌘ RESPONSIVE<strong>Every screen</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">What I do</span>
-        <h2>Digital solutions built to <span class="gradient">move you forward.</span></h2>
-        <p>From a first online presence to a complete business website, choose the service that fits your next step.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card reveal">
-          <span class="icon">◈</span><h3>Business Website</h3>
-          <p>Build trust with a professional website that explains your services and helps customers contact you.</p>
-          <a class="card-link" href="#contact" data-service="Business Website">Discuss project ↗</a>
-        </article>
-        <article class="card reveal">
-          <span class="icon">▣</span><h3>Product Catalogue</h3>
-          <p>Present your products in a clean catalogue with categories, images and enquiry options.</p>
-          <a class="card-link" href="#contact" data-service="Product Catalogue">Discuss project ↗</a>
-        </article>
-        <article class="card reveal">
-          <span class="icon">⌘</span><h3>Landing Page</h3>
-          <p>A focused page for your offer, campaign or new business idea, designed to encourage action.</p>
-          <a class="card-link" href="#contact" data-service="Landing Page">Discuss project ↗</a>
-        </article>
-        <article class="card reveal">
-          <span class="icon">✧</span><h3>Website Redesign</h3>
-          <p>Give an outdated website a cleaner layout, modern visuals and a better mobile experience.</p>
-          <a class="card-link" href="#contact" data-service="Website Redesign">Discuss project ↗</a>
-        </article>
-        <article class="card reveal">
-          <span class="icon">↗</span><h3>Portfolio Website</h3>
-          <p>Show your work, skills and story in a personal portfolio made to stand out.</p>
-          <a class="card-link" href="#contact" data-service="Portfolio Website">Discuss project ↗</a>
-        </article>
-        <article class="card reveal">
-          <span class="icon">⚙</span><h3>Updates & Support</h3>
-          <p>Small content updates, layout fixes and improvements for an existing website.</p>
-          <a class="card-link" href="#contact" data-service="Website Updates">Discuss project ↗</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="wrap split">
-      <div class="glass-panel reveal">
-        <span class="eyebrow">A little about me</span>
-        <h2>Small details. <span class="gradient">Big difference.</span></h2>
-        <p class="muted">I’m TK Web Developer. My focus is creating websites that look modern, work smoothly on mobile and make it easy for customers to understand your business.</p>
-        <ul class="check-list">
-          <li>Clean, modern visual design</li>
-          <li>Responsive layouts for mobile and desktop</li>
-          <li>Clear communication and practical features</li>
-          <li>Designed around your business goals</li>
-        </ul>
-        <p class="sample-note">Project scope and delivery time are confirmed before work begins.</p>
-      </div>
-
-      <div class="glass-panel reveal">
-        <span class="eyebrow">My approach</span>
-        <h2>From first idea to <span class="gradient">launch day.</span></h2>
-        <p class="muted">A straightforward process keeps your project clear and organised.</p>
-        <div class="stats">
-          <div class="stat"><strong>01</strong><span>Understand your goals</span></div>
-          <div class="stat"><strong>02</strong><span>Plan the layout</span></div>
-          <div class="stat"><strong>03</strong><span>Build and review</span></div>
-          <div class="stat"><strong>04</strong><span>Launch together</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="portfolio">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Selected concepts</span>
-        <h2>Ideas made <span class="gradient">visible.</span></h2>
-        <p>These are sample design concepts, not claims of completed client projects.</p>
-      </div>
-
-      <div class="projects">
-        <article class="project reveal">
-          <div class="project-art"><span>SAJAWAT</span></div>
-          <div class="project-body">
-            <h3>Handicraft Catalogue</h3>
-            <p>Warm product presentation for a home décor and drapes business.</p>
-            <a class="card-link" href="#contact" data-service="Product Catalogue">Build something similar ↗</a>
-          </div>
-        </article>
-        <article class="project reveal">
-          <div class="project-art"><span>SHOP / NOW</span></div>
-          <div class="project-body">
-            <h3>Online Store Concept</h3>
-            <p>Product-focused storefront concept with clear browsing and enquiry flow.</p>
-            <a class="card-link" href="#contact" data-service="Online Store">Build something similar ↗</a>
-          </div>
-        </article>
-        <article class="project reveal">
-          <div class="project-art"><span>CREATIVE TK</span></div>
-          <div class="project-body">
-            <h3>Personal Portfolio</h3>
-            <p>A bold digital profile for a freelancer, student or creator.</p>
-            <a class="card-link" href="#contact" data-service="Portfolio Website">Build something similar ↗</a>
-          </div>
-        </article>
-      </div>
-
-      <p class="sample-note">Online payments, login systems, databases and other advanced integrations may require extra setup or third-party services.</p>
-    </div>
-  </section>
-
-  <section class="section" id="pricing">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Simple starting prices</span>
-        <h2>Choose your <span class="gradient">starting point.</span></h2>
-        <p>These are indicative starting prices, not a final quote. Final cost depends on pages, features, content and integrations.</p>
-      </div>
-
-      <div class="pricing">
-        <article class="price-card reveal">
-          <h3>Starter</h3>
-          <div class="price">₹1,499 <small>/ starting</small></div>
-          <p>For a simple personal page or small online presence.</p>
-          <ul class="check-list">
-            <li>Single-page layout</li><li>Mobile-friendly design</li>
-            <li>Contact or WhatsApp link</li><li>One revision round</li>
-          </ul>
-          <a class="glow-btn" href="#contact" data-package="Starter — starting at ₹1,499">Choose Starter ↗</a>
-        </article>
-
-        <article class="price-card featured reveal">
-          <span class="popular">POPULAR</span>
-          <h3>Business</h3>
-          <div class="price">₹3,999 <small>/ starting</small></div>
-          <p>For a business that needs more room to explain its offer.</p>
-          <ul class="check-list">
-            <li>Up to 4 sections/pages (scope agreed)</li><li>Responsive design</li>
-            <li>Enquiry form setup</li><li>Basic on-page SEO setup</li>
-          </ul>
-          <a class="glow-btn primary" href="#contact" data-package="Business — starting at ₹3,999">Choose Business ↗</a>
-        </article>
-
-        <article class="price-card reveal">
-          <h3>Premium</h3>
-          <div class="price">₹5,999 <small>/ starting</small></div>
-          <p>For a richer website with more custom sections.</p>
-          <ul class="check-list">
-            <li>Custom visual direction</li><li>More page sections</li>
-            <li>Portfolio or catalogue layout</li><li>Extra polish and review</li>
-          </ul>
-          <a class="glow-btn" href="#contact" data-package="Premium — starting at ₹5,999">Choose Premium ↗</a>
-        </article>
-      </div>
-
-      <p class="sample-note">Domain, paid hosting, premium assets, payment gateways and complex backend features are not included unless agreed.</p>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Let’s talk</span>
-        <h2>Have a project in <span class="gradient">mind?</span></h2>
-        <p>Share a few details. Your message will be prepared in WhatsApp so you can review and send it.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="glass-panel reveal">
-          <h3>Let’s create something useful.</h3>
-          <p class="muted" style="margin-top:9px">Tell me what you want to build, and we can discuss the next steps.</p>
-          <div class="contact-details">
-            <a class="contact-item" href="tel:+919016249230">
-              <span class="icon">☎</span>
-              <span><strong>Call / Mobile</strong><small>+91 90162 49230</small></span>
-            </a>
-            <a class="contact-item" href="mailto:shaikhsofiya1535@gmail.com">
-              <span class="icon">✉</span>
-              <span><strong>Email</strong><small>shaikhsofiya1535@gmail.com</small></span>
-            </a>
-            <div class="contact-item">
-              <span class="icon">⌖</span>
-              <span><strong>Location</strong><small>Danilimda, Ahmedabad, Gujarat</small></span>
+        <div class="hero-visual">
+          <div class="orb"></div>
+          <div class="code-window">
+            <div class="window-top">
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+              <span class="window-file">your-future.html</span>
+            </div>
+            <div class="code-content" aria-label="Decorative sample code">
+              <div class="code-line"><span class="code-number">01</span><span class="code-purple">&lt;section</span> <span class="code-blue">class</span>=<span class="code-green">"future"</span><span class="code-purple">&gt;</span></div>
+              <div class="code-line"><span class="code-number">02</span>&nbsp; <span class="code-purple">&lt;h1&gt;</span></div>
+              <div class="code-line"><span class="code-number">03</span>&nbsp;&nbsp;&nbsp; Build something</div>
+              <div class="code-line"><span class="code-number">04</span>&nbsp;&nbsp;&nbsp; <span class="code-pink">extraordinary.</span></div>
+              <div class="code-line"><span class="code-number">05</span>&nbsp; <span class="code-purple">&lt;/h1&gt;</span></div>
+              <div class="code-line"><span class="code-number">06</span>&nbsp; <span class="code-purple">&lt;button</span> <span class="code-blue">class</span>=<span class="code-green">"launch"</span><span class="code-purple">&gt;</span></div>
+              <div class="code-line"><span class="code-number">07</span>&nbsp;&nbsp;&nbsp; Let's build ↗</div>
+              <div class="code-line"><span class="code-number">08</span>&nbsp; <span class="code-purple">&lt;/button&gt;</span></div>
+              <div class="code-line"><span class="code-number">09</span><span class="code-purple">&lt;/section&gt;</span></div>
             </div>
           </div>
+
+          <div class="floating-chip chip-one">
+            <span class="chip-icon">✦</span>
+            <span><strong>Modern UI</strong><small>Designed with purpose</small></span>
+          </div>
+
+          <div class="floating-chip chip-two">
+            <span class="chip-icon">↗</span>
+            <span><strong>Responsive Design</strong><small>Desktop + mobile</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>✦ Modern UI</strong><span>Clean visual design</span></div>
+        <div class="trust-item"><strong>⌘ Responsive</strong><span>Mobile-first layouts</span></div>
+        <div class="trust-item"><strong>⚡ Performance</strong><span>Lean implementation</span></div>
+        <div class="trust-item"><strong>◎ Support</strong><span>Direct communication</span></div>
+      </div>
+    </div>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">What We Do</span>
+          <h2>Digital solutions for <span class="gradient-text">your next move.</span></h2>
+          <p>Choose the website services that fit your business, brand or personal project.</p>
         </div>
 
-        <div class="glass-panel reveal">
-          <form id="contactForm">
-            <div class="form-row">
-              <div>
-                <label for="name">Your name *</label>
-                <input id="name" autocomplete="name" placeholder="Enter your name" required>
-              </div>
-              <div>
-                <label for="phone">Mobile number *</label>
-                <input id="phone" type="tel" autocomplete="tel" placeholder="Your mobile number" required>
+        <div class="grid-3">
+          <article class="glass-card tilt-card reveal">
+            <div class="service-icon">✧</div>
+            <h3>Business Websites</h3>
+            <p>Give your business a professional online presence with a clear layout, useful information and simple contact options.</p>
+            <ul class="feature-list">
+              <li>Business information</li>
+              <li>Contact and enquiry section</li>
+              <li>Responsive page layout</li>
+            </ul>
+          </article>
+
+          <article class="glass-card tilt-card reveal delay-1">
+            <div class="service-icon">◈</div>
+            <h3>Landing Pages</h3>
+            <p>Focused landing pages designed to introduce a service, highlight an offer and guide visitors toward one action.</p>
+            <ul class="feature-list">
+              <li>Clear headline and message</li>
+              <li>Call-to-action buttons</li>
+              <li>Modern visual effects</li>
+            </ul>
+          </article>
+
+          <article class="glass-card tilt-card reveal delay-2">
+            <div class="service-icon">⌘</div>
+            <h3>Portfolio Websites</h3>
+            <p>Showcase your skills, projects and experience through a polished portfolio that is easy to explore.</p>
+            <ul class="feature-list">
+              <li>Project showcase</li>
+              <li>About and skills sections</li>
+              <li>Contact links</li>
+            </ul>
+          </article>
+
+          <article class="glass-card tilt-card reveal">
+            <div class="service-icon">▦</div>
+            <h3>Website Redesign</h3>
+            <p>Refresh an existing website with a more consistent layout, updated styling and better mobile usability.</p>
+            <ul class="feature-list">
+              <li>Visual refresh</li>
+              <li>Mobile layout improvements</li>
+              <li>Content organization</li>
+            </ul>
+          </article>
+
+          <article class="glass-card tilt-card reveal delay-1">
+            <div class="service-icon">✺</div>
+            <h3>Interactive Design</h3>
+            <p>Add thoughtful motion and useful interactions that make the website feel more engaging without getting in the way.</p>
+            <ul class="feature-list">
+              <li>Scroll animations</li>
+              <li>Interactive cards</li>
+              <li>Buttons and navigation</li>
+            </ul>
+          </article>
+
+          <article class="glass-card tilt-card reveal delay-2">
+            <div class="service-icon">⌁</div>
+            <h3>Website Consultation</h3>
+            <p>Discuss your idea, intended audience and website requirements before deciding the right approach.</p>
+            <ul class="feature-list">
+              <li>Project planning</li>
+              <li>Page and feature ideas</li>
+              <li>Package discussion</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="about-monogram">TK<span class="gradient-text">.</span></div>
+        </div>
+
+        <div class="about-content reveal delay-1">
+          <span class="eyebrow">About TK</span>
+          <h2>Ideas deserve a <span class="gradient-text">great website.</span></h2>
+          <p>TK Web Developer focuses on creating modern website experiences for businesses, creators and individuals who want to present their work online.</p>
+          <p>From a simple business page to a more interactive design, the goal is to keep the experience clear, attractive and usable on different screen sizes.</p>
+
+          <div class="about-points">
+            <div class="about-point"><span>✓</span> Responsive layouts</div>
+            <div class="about-point"><span>✓</span> Modern styling</div>
+            <div class="about-point"><span>✓</span> Clear communication</div>
+            <div class="about-point"><span>✓</span> Project-based pricing</div>
+          </div>
+
+          <a class="btn btn-glass" href="#contact">Discuss Your Idea ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Design Concepts</span>
+          <h2>A glimpse of <span class="gradient-text">what's possible.</span></h2>
+          <p>These are sample design concepts for demonstrating possible styles, not completed client projects.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="glass-card portfolio-card reveal">
+            <div class="portfolio-art">
+              <div class="mock-browser">
+                <div class="mock-top">NOVA STUDIO &nbsp; ━━━</div>
+                <div class="mock-body">
+                  <div class="mock-title">Design Beyond.</div>
+                  <div class="mock-sub">A creative studio concept with a bold visual identity.</div>
+                  <span class="mock-btn">Explore →</span>
+                  <div class="mock-lines"><span></span><span></span><span></span></div>
+                </div>
               </div>
             </div>
+            <div class="portfolio-info">
+              <h3>Creative Studio</h3>
+              <p>A bold, editorial-inspired concept for a creative brand.</p>
+              <span class="sample-label">Sample concept</span>
+            </div>
+          </article>
 
-            <div>
-              <label for="business">Business / project name</label>
-              <input id="business" placeholder="Your business or idea">
+          <article class="glass-card portfolio-card reveal delay-1">
+            <div class="portfolio-art">
+              <div class="mock-browser">
+                <div class="mock-top">LUMEN STORE &nbsp; ━━━</div>
+                <div class="mock-body" style="background:linear-gradient(120deg,#1b2544,#11182d)">
+                  <div class="mock-title">Less. Better.</div>
+                  <div class="mock-sub">A clean storefront-style layout concept.</div>
+                  <span class="mock-btn" style="background:#c7a8ff">Discover →</span>
+                  <div class="mock-lines"><span style="background:#b5a5e9"></span><span style="background:#718cb4"></span><span style="background:#b9d8cf"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Modern Store</h3>
+              <p>A minimal product presentation concept for a retail brand.</p>
+              <span class="sample-label">Sample concept</span>
+            </div>
+          </article>
+
+          <article class="glass-card portfolio-card reveal delay-2">
+            <div class="portfolio-art">
+              <div class="mock-browser">
+                <div class="mock-top">YOUR PORTFOLIO &nbsp; ━━━</div>
+                <div class="mock-body" style="background:linear-gradient(120deg,#102e40,#10162b)">
+                  <div class="mock-title">Hello, World.</div>
+                  <div class="mock-sub">A personal portfolio concept for showing skills and work.</div>
+                  <span class="mock-btn" style="background:#8df0bf">View Work →</span>
+                  <div class="mock-lines"><span style="background:#5a9ca9"></span><span style="background:#827acb"></span><span style="background:#3d6d8a"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Personal Portfolio</h3>
+              <p>A focused layout for a developer, freelancer or creator.</p>
+              <span class="sample-label">Sample concept</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">How It Works</span>
+          <h2>From idea to <span class="gradient-text">online presence.</span></h2>
+          <p>A simple process to discuss the requirements and move toward a website.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="process-number">01</div>
+            <h3>Discuss</h3>
+            <p>Share your business, audience, goals and the features you need.</p>
+          </div>
+          <div class="process-step reveal delay-1">
+            <div class="process-number">02</div>
+            <h3>Plan</h3>
+            <p>Agree on the pages, design direction, price and expected timeline.</p>
+          </div>
+          <div class="process-step reveal delay-2">
+            <div class="process-number">03</div>
+            <h3>Build</h3>
+            <p>Develop the agreed design and review the website together.</p>
+          </div>
+          <div class="process-step reveal delay-3">
+            <div class="process-number">04</div>
+            <h3>Launch</h3>
+            <p>Publish after approval and completion of the agreed requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Simple Packages</span>
+          <h2>Choose your <span class="gradient-text">starting point.</span></h2>
+          <p>Starting prices only. Final pricing depends on the agreed pages, features, content and scope.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="glass-card pricing-card tilt-card reveal">
+            <h3>Starter</h3>
+            <p>For a simple online presence.</p>
+            <div class="price">₹1,499<small> onwards</small></div>
+            <ul class="feature-list">
+              <li>Basic single-page website</li>
+              <li>Responsive layout</li>
+              <li>Business information</li>
+              <li>Contact link or button</li>
+              <li>Basic styling</li>
+            </ul>
+            <button class="btn btn-glass choose-package" data-package="Starter — ₹1,499 onwards">Choose Starter ↗</button>
+          </article>
+
+          <article class="glass-card pricing-card featured tilt-card reveal delay-1">
+            <span class="popular-label">Popular choice</span>
+            <h3>Professional</h3>
+            <p>For a growing business or portfolio.</p>
+            <div class="price">₹3,999<small> onwards</small></div>
+            <ul class="feature-list">
+              <li>Multiple website sections</li>
+              <li>Modern custom styling</li>
+              <li>Mobile-friendly navigation</li>
+              <li>Enquiry and contact section</li>
+              <li>Interactive visual effects</li>
+            </ul>
+            <button class="btn btn-primary choose-package" data-package="Professional — ₹3,999 onwards">Choose Professional ↗</button>
+          </article>
+
+          <article class="glass-card pricing-card tilt-card reveal delay-2">
+            <h3>Premium</h3>
+            <p>For a more customized experience.</p>
+            <div class="price">₹5,999<small> onwards</small></div>
+            <ul class="feature-list">
+              <li>Custom design direction</li>
+              <li>Advanced motion effects</li>
+              <li>Additional page sections</li>
+              <li>Enhanced interactions</li>
+              <li>Scope-based customization</li>
+            </ul>
+            <button class="btn btn-glass choose-package" data-package="Premium — ₹5,999 onwards">Choose Premium ↗</button>
+          </article>
+        </div>
+
+        <p class="pricing-note">Domain, hosting, paid tools, third-party services and ongoing maintenance may cost extra. Confirm all inclusions before ordering.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Let's Connect</span>
+          <h2>Have an idea? <span class="gradient-text">Let's discuss it.</span></h2>
+          <p>Share a few details and prepare your project enquiry in WhatsApp.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="glass-card contact-info reveal">
+            <h3>Let's build something useful.</h3>
+            <p>Tell us what you need. We can discuss the website scope, design direction and estimated price.</p>
+
+            <div class="contact-detail">
+              <div class="service-icon">✉</div>
+              <div><strong>Email</strong><a href="mailto:shaikhsofiya1535@gmail.com">shaikhsofiya1535@gmail.com</a></div>
             </div>
 
-            <div>
-              <label for="service">What do you need?</label>
-              <select id="service">
-                <option value="Not sure yet">Choose a service</option>
-                <option>Business Website</option>
-                <option>Product Catalogue</option>
-                <option>Landing Page</option>
-                <option>Website Redesign</option>
-                <option>Portfolio Website</option>
-                <option>Online Store</option>
-                <option>Website Updates</option>
-                <option>Other</option>
-              </select>
+            <div class="contact-detail">
+              <div class="service-icon">☏</div>
+              <div><strong>Phone / WhatsApp</strong><a href="https://wa.me/919016249230" target="_blank" rel="noopener noreferrer">+91 90162 49230</a></div>
             </div>
 
-            <div>
-              <label for="budget">Approximate budget</label>
-              <select id="budget">
-                <option>Not decided</option>
-                <option>Under ₹2,000</option>
-                <option>₹2,000–₹5,000</option>
-                <option>₹5,000–₹10,000</option>
-                <option>₹10,000+</option>
-              </select>
+            <div class="contact-detail">
+              <div class="service-icon">⌖</div>
+              <div><strong>Location</strong><span>Danilimda, Ahmedabad, Gujarat, India</span></div>
+            </div>
+          </div>
+
+          <form class="glass-card contact-form" id="enquiryForm">
+            <h3>Project enquiry</h3>
+            <p>Fill this in to prepare a WhatsApp message.</p>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="customerName">Your name *</label>
+                <input id="customerName" name="customerName" type="text" placeholder="Enter your name" required maxlength="100" autocomplete="name">
+              </div>
+
+              <div class="field">
+                <label for="businessName">Business / brand</label>
+                <input id="businessName" name="businessName" type="text" placeholder="Your business name" maxlength="120">
+              </div>
+
+              <div class="field">
+                <label for="customerPhone">Your phone</label>
+                <input id="customerPhone" name="customerPhone" type="tel" placeholder="Your contact number" maxlength="25" autocomplete="tel">
+              </div>
+
+              <div class="field">
+                <label for="packageSelect">Package *</label>
+                <select id="packageSelect" name="packageSelect" required>
+                  <option value="">Choose a package</option>
+                  <option>Starter — ₹1,499 onwards</option>
+                  <option>Professional — ₹3,999 onwards</option>
+                  <option>Premium — ₹5,999 onwards</option>
+                  <option>Custom website</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="projectDetails">What kind of website do you need? *</label>
+                <textarea id="projectDetails" name="projectDetails" placeholder="Describe your website idea, pages or features..." required maxlength="1500"></textarea>
+              </div>
             </div>
 
-            <div>
-              <label for="message">Project details *</label>
-              <textarea id="message" placeholder="What kind of website do you want?" required></textarea>
-            </div>
-
-            <button class="glow-btn primary" type="submit">Prepare WhatsApp Enquiry ↗</button>
-            <p class="form-help">This form opens WhatsApp with your message filled in. You must press Send in WhatsApp.</p>
+            <button class="btn btn-primary" type="submit">Prepare WhatsApp Enquiry ↗</button>
+            <p class="form-disclaimer">Your message will open in WhatsApp. Review it and press Send there to submit it.</p>
           </form>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <span class="eyebrow">Your Next Step</span>
+          <h2>Ready to take your idea <span class="gradient-text">online?</span></h2>
+          <p>Start with a conversation. We can work out the right design and features for your requirements.</p>
+          <a class="btn btn-primary" href="#contact">Discuss Your Project ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="#home"><span class="logo-mark">TK</span> Web Developer</a>
+        <p class="footer-copy" style="margin-top:10px;">© <span id="year"></span> TK Web Developer. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="mailto:shaikhsofiya1535@gmail.com">Email</a>
+      </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="wrap footer-inner">
-    <a class="brand" href="#home">
-      <span class="brand-mark">TK</span>
-      <span>WEB DEVELOPER<small>Ideas to Digital Reality</small></span>
-    </a>
+  <a class="whatsapp-float" href="https://wa.me/919016249230?text=Hello%20TK%20Web%20Developer%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp" title="Chat on WhatsApp">☏</a>
+  <button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
 
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#pricing">Pricing</a>
-      <a href="terms.html">Terms & Conditions</a>
-    </div>
+  <script>
+    (() => {
+      "use strict";
 
-    <span>© <span id="year"></span> TK Web Developer</span>
-  </div>
-</footer>
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-<a class="float-wa"
-   href="https://wa.me/919016249230?text=Hello%20TK%20Web%20Developer%2C%20I%20want%20to%20discuss%20a%20website%20project."
-   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">◉</a>
+      // Current year
+      document.getElementById("year").textContent = new Date().getFullYear();
 
-<button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
+      // Mobile navigation
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
 
-<script>
-  // Mobile navigation
-  const menuBtn = document.getElementById('menuBtn');
-  const navLinks = document.getElementById('navLinks');
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+      });
 
-  menuBtn.addEventListener('click', function () {
-    const open = navLinks.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.textContent = open ? '✕' : '☰';
-  });
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation");
+          menuToggle.textContent = "☰";
+        });
+      });
 
-  navLinks.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      navLinks.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.textContent = '☰';
-    });
-  });
+      // Typing animation
+      const typingText = document.getElementById("typingText");
+      const phrases = ["Modern Websites", "Creative Experiences", "Responsive Design", "Digital Possibilities"];
+      let phraseIndex = 0;
+      let charIndex = phrases[0].length;
+      let deleting = true;
 
-  // Typing animation
-  const phrases = [
-    'Website Today',
-    'Digital Presence',
-    'Online Success',
-    'Next Big Idea'
-  ];
+      function typeLoop() {
+        if (reducedMotion) return;
 
-  const typedText = document.getElementById('typedText');
-  let phraseIndex = 0;
-  let letterIndex = phrases[0].length;
-  let deleting = true;
+        const currentPhrase = phrases[phraseIndex];
 
-  function typeLoop() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      typedText.textContent = phrases[0];
-      return;
-    }
+        if (deleting) {
+          charIndex--;
+          typingText.textContent = currentPhrase.slice(0, Math.max(0, charIndex));
 
-    if (deleting) {
-      letterIndex--;
-      typedText.textContent = phrases[phraseIndex].slice(0, Math.max(0, letterIndex));
+          if (charIndex <= 0) {
+            deleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(typeLoop, 350);
+            return;
+          }
+          setTimeout(typeLoop, 42);
+        } else {
+          const nextPhrase = phrases[phraseIndex];
+          charIndex++;
+          typingText.textContent = nextPhrase.slice(0, charIndex);
 
-      if (letterIndex <= 0) {
-        deleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-      }
-
-      setTimeout(typeLoop, 55);
-    } else {
-      const phrase = phrases[phraseIndex];
-      letterIndex++;
-      typedText.textContent = phrase.slice(0, letterIndex);
-
-      if (letterIndex >= phrase.length) {
-        deleting = true;
-        setTimeout(typeLoop, 1500);
-      } else {
-        setTimeout(typeLoop, 90);
-      }
-    }
-  }
-
-  setTimeout(typeLoop, 1600);
-
-  // Scroll reveal animation
-  const revealElements = document.querySelectorAll(
-    '.section-head, .card, .project, .glass-panel, .price-card'
-  );
-
-  if ('IntersectionObserver' in window) {
-    revealElements.forEach(function(element) {
-      element.classList.add('reveal');
-    });
-
-    const revealObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          if (charIndex >= nextPhrase.length) {
+            deleting = true;
+            setTimeout(typeLoop, 1500);
+            return;
+          }
+          setTimeout(typeLoop, 75);
         }
+      }
+
+      if (!reducedMotion) setTimeout(typeLoop, 1500);
+
+      // Scroll reveal
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window && !reducedMotion) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach(element => revealObserver.observe(element));
+      } else {
+        revealElements.forEach(element => element.classList.add("is-visible"));
+      }
+
+      // Pointer glow follows the mouse on devices with a fine pointer
+      const pointerGlow = document.getElementById("pointerGlow");
+
+      if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
+        window.addEventListener("pointermove", event => {
+          pointerGlow.style.left = event.clientX + "px";
+          pointerGlow.style.top = event.clientY + "px";
+        }, { passive: true });
+      }
+
+      // Interactive card glow and subtle 3D tilt
+      const tiltCards = document.querySelectorAll(".tilt-card");
+
+      if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
+        tiltCards.forEach(card => {
+          card.addEventListener("pointermove", event => {
+            const rect = card.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const percentX = x / rect.width;
+            const percentY = y / rect.height;
+
+            card.style.setProperty("--mx", percentX * 100 + "%");
+            card.style.setProperty("--my", percentY * 100 + "%");
+
+            const rotateX = (0.5 - percentY) * 5;
+            const rotateY = (percentX - 0.5) * 6;
+            card.style.transform =
+              "perspective(900px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg) translateY(-3px)";
+          });
+
+          card.addEventListener("pointerleave", () => {
+            card.style.transform = "";
+          });
+        });
+      }
+
+      // Pricing buttons select the matching package and scroll to enquiry
+      const packageSelect = document.getElementById("packageSelect");
+
+      document.querySelectorAll(".choose-package").forEach(button => {
+        button.addEventListener("click", () => {
+          packageSelect.value = button.dataset.package || "";
+          document.getElementById("contact").scrollIntoView({
+            behavior: reducedMotion ? "auto" : "smooth"
+          });
+
+          window.setTimeout(() => {
+            document.getElementById("customerName").focus({ preventScroll: true });
+          }, reducedMotion ? 0 : 550);
+        });
       });
-    }, { threshold: 0.12 });
 
-    revealElements.forEach(function(element) {
-      revealObserver.observe(element);
-    });
-  }
+      // Prepare a WhatsApp enquiry; the visitor must press Send in WhatsApp
+      const enquiryForm = document.getElementById("enquiryForm");
+      const whatsappNumber = "919016249230";
 
-  // Package buttons prefill project details
-  document.querySelectorAll('[data-package]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      document.getElementById('message').value =
-        'I am interested in the ' + link.dataset.package +
-        ' package. Please share details.';
-    });
-  });
+      enquiryForm.addEventListener("submit", event => {
+        event.preventDefault();
 
-  // Service buttons preselect the service
-  document.querySelectorAll('[data-service]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      const service = document.getElementById('service');
-      const requested = link.dataset.service;
+        if (!enquiryForm.reportValidity()) return;
 
-      const option = Array.from(service.options).find(function(item) {
-        return item.text === requested || item.value === requested;
+        const formData = new FormData(enquiryForm);
+        const name = String(formData.get("customerName") || "").trim();
+        const business = String(formData.get("businessName") || "").trim();
+        const phone = String(formData.get("customerPhone") || "").trim();
+        const selectedPackage = String(formData.get("packageSelect") || "").trim();
+        const details = String(formData.get("projectDetails") || "").trim();
+
+        const message = [
+          "Hello TK Web Developer! I want to discuss a website project.",
+          "",
+          "Name: " + name,
+          "Business / Brand: " + (business || "Not provided"),
+          "Phone: " + (phone || "Not provided"),
+          "Package: " + selectedPackage,
+          "",
+          "Project Details:",
+          details
+        ].join("\n");
+
+        const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
       });
 
-      if (option) service.value = option.value || option.text;
-    });
-  });
+      // Back-to-top button
+      const backTop = document.getElementById("backTop");
 
-  // WhatsApp enquiry form
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+      window.addEventListener("scroll", () => {
+        backTop.classList.toggle("visible", window.scrollY > 500);
+      }, { passive: true });
 
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const business = document.getElementById('business').value.trim() || 'Not provided';
-    const service = document.getElementById('service').value;
-    const budget = document.getElementById('budget').value;
-    const details = document.getElementById('message').value.trim();
+      backTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+      });
 
-    const text =
-      'Hello TK Web Developer! I want to discuss a website project.\n\n' +
-      'Name: ' + name + '\n' +
-      'Mobile: ' + phone + '\n' +
-      'Business/Project: ' + business + '\n' +
-      'Service: ' + service + '\n' +
-      'Budget: ' + budget + '\n' +
-      'Details: ' + details;
+      // Lightweight animated particle background
+      const canvas = document.getElementById("particleCanvas");
+      const ctx = canvas.getContext("2d");
 
-    const url = 'https://wa.me/919016249230?text=' + encodeURIComponent(text);
-    window.open(url, '_blank', 'noopener,noreferrer');
-  });
+      if (ctx && !reducedMotion) {
+        let width = 0;
+        let height = 0;
+        let particles = [];
+        let animationFrame = 0;
+        const pointer = { x: -1000, y: -1000 };
+        const maxParticles = window.innerWidth < 600 ? 35 : 65;
 
-  // Back to top button
-  const topBtn = document.getElementById('topBtn');
+        function resizeCanvas() {
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+          width = window.innerWidth;
+          height = window.innerHeight;
 
-  window.addEventListener('scroll', function() {
-    topBtn.classList.toggle('show', window.scrollY > 450);
-  }, { passive: true });
+          canvas.width = Math.round(width * dpr);
+          canvas.height = Math.round(height * dpr);
+          canvas.style.width = width + "px";
+          canvas.style.height = height + "px";
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-  topBtn.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+          const count = Math.min(maxParticles, Math.max(18, Math.floor(width / 22)));
+          particles = Array.from({ length: count }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.32,
+            vy: (Math.random() - 0.5) * 0.32,
+            radius: Math.random() * 1.6 + 0.5
+          }));
+        }
 
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+        function drawParticles() {
+          ctx.clearRect(0, 0, width, height);
+
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            const dx = p.x - pointer.x;
+            const dy = p.y - pointer.y;
+            const distanceToPointer = Math.sqrt(dx * dx + dy * dy);
+
+            if (distanceToPointer < 110 && distanceToPointer > 0) {
+              p.x += (dx / distanceToPointer) * 0.12;
+              p.y += (dy / distanceToPointer) * 0.12;
+            }
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = "rgba(117, 222, 255, 0.62)";
+            ctx.fill();
+
+            for (let j = i + 1; j < particles.length; j++) {
+              const other = particles[j];
+              const xDiff = p.x - other.x;
+              const yDiff = p.y - other.y;
+              const distance = Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+
+              if (distance < 105) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(other.x, other.y);
+                ctx.strokeStyle = "rgba(105, 168, 255, " + (1 - distance / 105) * 0.16 + ")";
+                ctx.lineWidth = 0.7;
+                ctx.stroke();
+              }
+            }
+          }
+
+          animationFrame = window.requestAnimationFrame(drawParticles);
+        }
+
+        window.addEventListener("pointermove", event => {
+          pointer.x = event.clientX;
+          pointer.y = event.clientY;
+        }, { passive: true });
+
+        window.addEventListener("pointerleave", () => {
+          pointer.x = -1000;
+          pointer.y = -1000;
+        });
+
+        window.addEventListener("resize", resizeCanvas, { passive: true });
+        resizeCanvas();
+        drawParticles();
+
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) {
+            window.cancelAnimationFrame(animationFrame);
+          } else {
+            window.cancelAnimationFrame(animationFrame);
+            drawParticles();
+          }
+        });
+      } else {
+        canvas.style.display = "none";
+      }
+    })();
+  </script>
 </body>
 </html>
+
