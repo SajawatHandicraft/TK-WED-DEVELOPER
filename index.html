@@ -2,186 +2,929 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TK Web Developer | Website Design in Ahmedabad</title>
-<meta name="description" content="TK Web Developer offers professional, responsive and affordable website design services for businesses in Ahmedabad, Gujarat.">
+  <title>TK Web Developer | Professional Website Design</title>
+  <meta name="description" content="TK Web Developer creates responsive business websites, product catalogues and portfolios for growing businesses in Ahmedabad, Gujarat.">
+  <meta name="theme-color" content="#070b14">
 
-<meta name="google-site-verification" content="dgvF9jSoVSToI_-_uWd2cmb5uHjFuZzM4Q3_eCsNJPQ" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TK Web Developer builds professional, mobile-friendly business websites, product catalogues and portfolios.">
-<meta name="theme-color" content="#38251d">
+  <meta name="google-site-verification" content="dgvF9jSoVSToI_-_uWd2cmb5uHjFuZzM4Q3_eCsNJPQ">
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#faf6ef;color:#38251d;line-height:1.7}
-a{text-decoration:none;color:inherit}
-.container{width:min(1100px,90%);margin:auto}
-header{background:#fffaf3;border-bottom:1px solid #e8ddd0;position:sticky;top:0;z-index:10}
-nav{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 0}
-.logo{font-size:21px;font-weight:800}.logo span,h1 span{color:#a66b3f}
-.nav-links{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
-.hero{padding:80px 0}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
-.tag{display:inline-block;border:1px solid #d9c5ae;border-radius:30px;padding:5px 13px;font-size:12px;letter-spacing:1px;margin-bottom:18px}
-h1{font-size:clamp(38px,5.5vw,62px);line-height:1.12;margin-bottom:20px}
-.hero p,.section-head p,.card p,.project p{color:#74665a}
-.hero p{max-width:570px;margin-bottom:24px}
-.btn{display:inline-block;padding:12px 20px;border-radius:7px;font-weight:bold;background:#38251d;color:white;margin:4px 7px 4px 0;border:0;cursor:pointer}
-.btn-light{background:transparent;color:#38251d;border:1px solid #bba58e}
-.hero-card{background:#38251d;color:#fff8ee;border-radius:18px;padding:30px;box-shadow:0 18px 45px #38251d20}
-.hero-card small{color:#d8b99b;letter-spacing:2px}
-.hero-card h2{font-size:28px;margin:14px 0}
-.hero-card p{color:#e6d7c8}
-.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
-.mini{padding:14px;background:#ffffff12;border-radius:10px}
-.mini strong{display:block;font-size:20px}
-section{padding:65px 0}
-.section-head{text-align:center;max-width:650px;margin:0 auto 32px}
-.section-head h2{font-size:clamp(27px,4vw,38px);margin-bottom:10px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card,.project{background:#fffdf9;padding:24px;border:1px solid #eadfd2;border-radius:13px}
-.card .icon{font-size:29px}
-.card h3,.project h3{margin:10px 0}
-.price{font-size:25px;font-weight:800;margin:13px 0}
-.portfolio{background:#f0e6d9}
-.contact-box{background:#38251d;color:#fff8ee;padding:35px;border-radius:17px;text-align:center}
-.contact-box p{color:#e6d7c8;margin:12px 0 22px}
-.contact-box .btn{background:#fff8ee;color:#38251d}
-form{max-width:650px;margin:28px auto 0;text-align:left;background:#fffaf3;color:#38251d;padding:25px;border-radius:13px}
-form h3{margin-bottom:16px}
-label{display:block;font-weight:bold;margin-top:10px}
-input,select,textarea{width:100%;padding:12px;margin:7px 0 12px;border:1px solid #cbb7a5;border-radius:6px;font:inherit;background:white}
-textarea{min-height:110px;resize:vertical}
-form button{width:100%;padding:14px;background:#25a85a;color:white;border:0;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer}
-footer{text-align:center;padding:24px 0;color:#74665a;font-size:13px}
-.whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;padding:13px 17px;border-radius:30px;font-weight:bold;box-shadow:0 3px 12px #999;z-index:20}
-@media(max-width:760px){.hero{padding:50px 0}.hero-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}nav{justify-content:center}.nav-links{justify-content:center}.contact-box{padding:25px 16px}}
-</style>
+  <style>
+    :root {
+      --bg: #070b14;
+      --panel: #0e1626;
+      --panel-light: #111e32;
+      --text: #edf5ff;
+      --muted: #9cabc2;
+      --blue: #50c8ff;
+      --purple: #9b7bff;
+      --border: rgba(100, 190, 255, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 5%, #102746 0, transparent 35%),
+        radial-gradient(ellipse at 90% 30%, #191237 0, transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin-inline: auto;
+    }
+
+    /* Navigation */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 11, 20, 0.9);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--blue);
+      text-shadow: 0 0 18px #50c8ff80;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 9px;
+      border: 1px solid var(--blue);
+      background: linear-gradient(120deg, #50c8ff, #8c9dff);
+      color: #07101d;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin: 5px 8px 5px 0;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px #50c8ff55;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 100px 0 85px;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--blue);
+      border: 1px solid var(--border);
+      background: #50c8ff0c;
+      padding: 6px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      color: var(--blue);
+      background: linear-gradient(90deg, #50c8ff, #b4a0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 24px;
+    }
+
+    .hero-card {
+      padding: 30px;
+      background: linear-gradient(145deg, #14243a, #0b1120);
+      border: 1px solid #50c8ff45;
+      border-radius: 22px;
+      box-shadow: 0 0 35px #328bff12, inset 0 0 25px #50c8ff08;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: -90px;
+      top: -90px;
+      border-radius: 50%;
+      background: #50c8ff22;
+      filter: blur(10px);
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .hero-card h2 {
+      font-size: 29px;
+      line-height: 1.3;
+      margin: 13px 0;
+    }
+
+    .hero-card > p {
+      color: var(--muted);
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .mini {
+      padding: 14px;
+      border-radius: 12px;
+      background: #ffffff08;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .mini strong {
+      display: block;
+      color: var(--blue);
+      font-size: 22px;
+    }
+
+    /* General sections */
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-head {
+      max-width: 680px;
+      text-align: center;
+      margin: 0 auto 38px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card,
+    .project {
+      min-width: 0;
+      background: linear-gradient(145deg, #111d30, #0b111e);
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: transform 0.25s ease, border-color 0.25s ease,
+                  box-shadow 0.25s ease;
+    }
+
+    .card:hover,
+    .project:hover {
+      transform: translateY(-5px);
+      border-color: #50c8ff88;
+      box-shadow: 0 12px 35px #00000025, 0 0 20px #50c8ff0c;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #50c8ff12;
+      border: 1px solid var(--border);
+      color: var(--blue);
+      font-size: 25px;
+    }
+
+    .card h3,
+    .project h3 {
+      font-size: 20px;
+      margin: 14px 0 8px;
+    }
+
+    .card p,
+    .project p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Pricing */
+
+    .price {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 16px 0 12px;
+      color: var(--blue);
+    }
+
+    .price-list {
+      list-style: none;
+      margin: 15px 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .price-list li {
+      padding: 5px 0;
+    }
+
+    .price-list li::before {
+      content: "✓ ";
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    .featured {
+      border-color: #50c8ff85;
+      box-shadow: 0 0 25px #50c8ff12;
+    }
+
+    .price-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 22px;
+    }
+
+    /* Portfolio */
+
+    .project-label {
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Contact */
+
+    .contact-box {
+      background: linear-gradient(140deg, #132740, #11102a);
+      border: 1px solid #50c8ff40;
+      border-radius: 22px;
+      padding: 42px 25px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: clamp(28px, 4vw, 40px);
+    }
+
+    .contact-box > p {
+      color: var(--muted);
+      margin: 12px auto 22px;
+      max-width: 600px;
+    }
+
+    form {
+      max-width: 650px;
+      margin: 30px auto 0;
+      padding: 27px;
+      text-align: left;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      border-radius: 16px;
+    }
+
+    form h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    label {
+      display: block;
+      margin: 13px 0 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 13px;
+      color: var(--text);
+      background: #080e19;
+      border: 1px solid #26364d;
+      border-radius: 8px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #8290a5;
+    }
+
+    select option {
+      background: #0b1220;
+      color: var(--text);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    form button {
+      width: 100%;
+      margin-top: 18px;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .terms-link {
+      display: inline-block;
+      padding: 9px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--blue);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .terms-link:hover {
+      box-shadow: 0 0 18px #50c8ff25;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 90;
+      background: #20c875;
+      color: #04140b;
+      padding: 12px 17px;
+      border-radius: 30px;
+      font-weight: 800;
+      box-shadow: 0 0 22px #20c87545;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Responsive layout */
+
+    @media (max-width: 800px) {
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px 17px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        width: 92%;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .nav-links {
+        font-size: 13px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card,
+      .card,
+      .project {
+        padding: 21px;
+      }
+
+      form {
+        padding: 19px;
+      }
+
+      .contact-box {
+        padding: 30px 17px;
+      }
+
+      .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        padding: 10px 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<div class="container"><nav>
-<a class="logo" href="#home">TK <span>Web Developer</span></a>
-<div class="nav-links">
-<a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a>
-</div>
-</nav></div>
-</header>
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="logo" href="#home">TK <span>Web Developer</span></a>
 
-<main>
-<section class="hero" id="home"><div class="container hero-grid">
-<div>
-<span class="tag">WEBSITE DESIGN · DIGITAL GROWTH</span>
-<h1>Your Business Deserves a <span>Better Website.</span></h1>
-<p>We create clean, mobile-friendly websites that help businesses showcase products, explain services and receive customer enquiries online.</p>
-<a class="btn" href="#contact">Discuss Your Website ↗</a>
-<a class="btn btn-light" href="#services">Explore Services</a>
-</div>
-<div class="hero-card">
-<small>YOUR DIGITAL PRESENCE</small>
-<h2>Make a Strong First Impression.</h2>
-<p>Professional design, clear information and a better experience on mobile and desktop.</p>
-<div class="mini-grid">
-<div class="mini"><strong>01</strong>Web Design</div>
-<div class="mini"><strong>02</strong>Basic SEO</div>
-<div class="mini"><strong>03</strong>Product Catalogues</div>
-<div class="mini"><strong>04</strong>Business Websites</div>
-</div>
-</div>
-</div></section>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<section id="services"><div class="container">
-<div class="section-head"><h2>Services for Your Business</h2><p>Digital solutions for shops, manufacturers, wholesalers and growing businesses.</p></div>
-<div class="cards">
-<article class="card"><div class="icon">✦</div><h3>Business Website</h3><p>Show business details, services and contact information in a professional layout.</p></article>
-<article class="card"><div class="icon">▦</div><h3>Product Catalogue</h3><p>Display products so customers can browse and enquire about your items.</p></article>
-<article class="card"><div class="icon">⌕</div><h3>Basic SEO Setup</h3><p>Page titles, descriptions and guidance for Google Search Console.</p></article>
-</div></div></section>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">WEB DESIGN · DIGITAL GROWTH</span>
 
-<section id="pricing"><div class="container">
-<div class="section-head"><h2>Website Packages</h2><p>Starting prices; final pricing depends on features and content.</p></div>
-<div class="cards">
-<article class="card"><h3>Starter Website</h3><p>For a simple online introduction.</p><div class="price">₹1,499+</div><p>One-page layout<br>Mobile-friendly design<br>Contact section</p></article>
-<article class="card"><h3>Business Website</h3><p>For businesses needing more details.</p><div class="price">₹3,999+</div><p>Multiple sections<br>Services and contact details<br>Basic SEO setup</p></article>
-<article class="card"><h3>Product Catalogue</h3><p>For wholesalers and manufacturers.</p><div class="price">₹5,999+</div><p>Product showcase<br>Enquiry options<br>Mobile-friendly design</p></article>
-</div>
-<p style="text-align:center;font-size:12px;color:#74665a;margin-top:18px">Starting prices only. Confirm scope and costs with each customer.</p>
-</div></section>
+          <h1>
+            Your Business Deserves a
+            <span class="gradient-text">Better Website.</span>
+          </h1>
 
-<section class="portfolio" id="portfolio"><div class="container">
-<div class="section-head"><h2>Demo Portfolio</h2><p>Sample concepts to demonstrate website styles; these are not client testimonials.</p></div>
-<div class="cards">
-<article class="project"><h3>Textile & Wholesale</h3><p>A product catalogue concept for textile suppliers and manufacturers.</p></article>
-<article class="project"><h3>Fashion & Retail</h3><p>A modern showcase for clothing shops and retail businesses.</p></article>
-<article class="project"><h3>Local Business</h3><p>A business website with services and enquiry details.</p></article>
-</div></div></section>
+          <p class="hero-copy">
+            We create modern, mobile-friendly websites that help businesses
+            showcase products, explain services and receive customer enquiries.
+          </p>
 
-<section id="contact"><div class="container">
-<div class="contact-box">
-<h2>Let's Build Your Website</h2>
-<p>Tell us about your business and the website you need.</p>
-<a class="btn" href="https://wa.me/919016249230?text=Hello%20TK%20Web%20Developer%2C%20I%20want%20a%20website." target="_blank" rel="noopener">WhatsApp Par Contact Karein ↗</a>
-</div>
+          <a class="btn" href="#contact">Start Your Project ↗</a>
+          <a class="btn btn-outline" href="#services">Explore Services</a>
+        </div>
 
-<form id="enquiryForm">
-<h3>Website Enquiry Form</h3>
-<label for="customerName">Your Name</label>
-<input id="customerName" required placeholder="Apna naam">
-<label for="customerMobile">Mobile Number</label>
-<input id="customerMobile" type="tel" required placeholder="Mobile number">
-<label for="websiteType">Website Type</label>
-<select id="websiteType" required>
-<option value="">Select karein</option><option>Business Website</option><option>Online Store</option><option>Portfolio Website</option><option>Other</option>
-</select>
-<label for="requirements">Budget Aur Requirement</label>
-<textarea id="requirements" required placeholder="Budget aur website ki details"></textarea>
-<button type="submit">WhatsApp Par Enquiry Bhejein</button>
-</form>
-</div></section>
-</main>
+        <div class="hero-card">
+          <span class="eyebrow">YOUR DIGITAL PRESENCE</span>
+          <h2>Ideas Into Digital Experiences.</h2>
 
-<footer><div class="container">© <span id="year"></span> TK Web Developer. All rights reserved.</div></footer>
+          <p>
+            Professional layouts, clear information and a smooth experience
+            across mobile phones, tablets and computers.
+          </p>
 
-<a class="whatsapp-float" href="https://wa.me/919016249230?text=Hello%20TK%20Web%20Developer%2C%20I%20want%20a%20website." target="_blank" rel="noopener">WhatsApp</a>
+          <div class="mini-grid">
+            <div class="mini"><strong>01</strong>Web Design</div>
+            <div class="mini"><strong>02</strong>Basic SEO</div>
+            <div class="mini"><strong>03</strong>Product Catalogues</div>
+            <div class="mini"><strong>04</strong>Business Websites</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">WHAT WE DO</span>
+          <h2>Services for Your Business</h2>
+          <p>
+            Digital solutions for shops, manufacturers, wholesalers
+            and growing businesses.
+          </p>
+        </div>
 
-document.getElementById("enquiryForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const name = document.getElementById("customerName").value.trim();
-  const mobile = document.getElementById("customerMobile").value.trim();
-  const type = document.getElementById("websiteType").value;
-  const requirements = document.getElementById("requirements").value.trim();
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">✦</div>
+            <h3>Business Website</h3>
+            <p>
+              Present your business, services and contact information
+              in a professional online space.
+            </p>
+          </article>
 
-  const message = "New Website Enquiry - TK Web Developer\n\n" +
-    "Customer Name: " + name + "\n" +
-    "Mobile Number: " + mobile + "\n" +
-    "Website Type: " + type + "\n" +
-    "Budget / Requirement: " + requirements;
+          <article class="card">
+            <div class="icon" aria-hidden="true">▦</div>
+            <h3>Product Catalogue</h3>
+            <p>
+              Display your products and help customers enquire about
+              the items they need.
+            </p>
+          </article>
 
-  const url = "https://wa.me/919016249230?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
-});
-</script>
-          
-<footer>
-    <p>
-        <a href="terms.html"
-           style="display:inline-block;
-                  padding:12px 22px;
-                  background-color:#6b4f3a;
-                  color:white;
-                  text-decoration:none;
-                  border-radius:8px;
-                  font-weight:bold;">
-            Terms & Conditions
-        </a>
-    </p>
-    <p>© 2026 TK Web Developer. All rights reserved.</p>
-</footer>
+          <article class="card">
+            <div class="icon" aria-hidden="true">⌕</div>
+            <h3>Basic SEO Setup</h3>
+            <p>
+              Improve page titles, descriptions and essential
+              search-engine setup.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">SIMPLE PACKAGES</span>
+          <h2>Website Pricing</h2>
+          <p>
+            Starting prices for different project sizes.
+            Final cost depends on your requirements.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Starter Website</h3>
+            <p>For a simple business introduction.</p>
+            <div class="price">₹1,499+</div>
+            <ul class="price-list">
+              <li>One-page layout</li>
+              <li>Mobile-friendly design</li>
+              <li>Contact section</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact"
+               data-package="Starter Website">Choose Package</a>
+          </article>
+
+          <article class="card featured">
+            <span class="eyebrow">BUSINESS ESSENTIALS</span>
+            <h3>Business Website</h3>
+            <p>For businesses needing more information.</p>
+            <div class="price">₹3,999+</div>
+            <ul class="price-list">
+              <li>Multiple sections</li>
+              <li>Services and contact details</li>
+              <li>Basic SEO setup</li>
+            </ul>
+            <a class="btn" href="#contact"
+               data-package="Business Website">Choose Package</a>
+          </article>
+
+          <article class="card">
+            <h3>Product Catalogue</h3>
+            <p>For wholesalers and manufacturers.</p>
+            <div class="price">₹5,999+</div>
+            <ul class="price-list">
+              <li>Product showcase</li>
+              <li>Enquiry options</li>
+              <li>Mobile-friendly design</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact"
+               data-package="Product Catalogue">Choose Package</a>
+          </article>
+        </div>
+
+        <p class="price-note">
+          Starting prices only. Confirm features, delivery time
+          and final costs with each customer.
+        </p>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">SELECTED CONCEPTS</span>
+          <h2>Demo Portfolio</h2>
+          <p>
+            Sample project concepts that demonstrate the types of websites
+            we can create. These are not client testimonials.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="project">
+            <span class="project-label">Concept 01</span>
+            <h3>Textile & Wholesale</h3>
+            <p>
+              A product catalogue concept for textile suppliers
+              and manufacturers.
+            </p>
+          </article>
+
+          <article class="project">
+            <span class="project-label">Concept 02</span>
+            <h3>Fashion & Retail</h3>
+            <p>
+              A modern product showcase for clothing shops
+              and retail businesses.
+            </p>
+          </article>
+
+          <article class="project">
+            <span class="project-label">Concept 03</span>
+            <h3>Local Business</h3>
+            <p>
+              A clear business website with services and
+              customer enquiry options.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <span class="eyebrow">LET'S WORK TOGETHER</span>
+          <h2>Let's Build Your Website</h2>
+          <p>
+            Tell us about your business, your goals and the
+            website you need.
+          </p>
+
+          <a class="btn"
+             href="https://wa.me/919016249230?text=Hello%20TK%20Web%20Developer%2C%20I%20want%20a%20website."
+             target="_blank" rel="noopener noreferrer">
+            WhatsApp Par Contact Karein ↗
+          </a>
+        </div>
+
+        <form id="enquiryForm">
+          <h3>Website Enquiry Form</h3>
+
+          <label for="customerName">Your Name</label>
+          <input id="customerName" name="customerName"
+                 type="text" autocomplete="name"
+                 placeholder="Apna naam" required>
+
+          <label for="customerMobile">Mobile Number</label>
+          <input id="customerMobile" name="customerMobile"
+                 type="tel" autocomplete="tel"
+                 inputmode="tel" pattern="[0-9+\-\s()]{7,20}"
+                 placeholder="Mobile number" required>
+
+          <label for="websiteType">Website Type</label>
+          <select id="websiteType" name="websiteType" required>
+            <option value="">Select karein</option>
+            <option>Business Website</option>
+            <option>Online Store</option>
+            <option>Portfolio Website</option>
+            <option>Product Catalogue</option>
+            <option>Other</option>
+          </select>
+
+          <label for="requirements">Budget Aur Requirement</label>
+          <textarea id="requirements" name="requirements"
+                    placeholder="Budget aur website ki details"
+                    required></textarea>
+
+          <button class="btn" type="submit">
+            WhatsApp Par Enquiry Bhejein ↗
+          </button>
+
+          <p class="form-note">
+            Submit karne par WhatsApp khulega. Message bhejne se pehle
+            details check kar sakte hain.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a class="terms-link" href="terms.html">Terms &amp; Conditions</a>
+      </div>
+
+      <p>© <span id="year"></span> TK Web Developer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="https://wa.me/919016249230?text=Hello%20TK%20Web%20Developer%2C%20I%20want%20a%20website."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contact TK Web Developer on WhatsApp">
+    WhatsApp ↗
+  </a>
+
+  <script>
+    // Show the current year automatically.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Let customers select a package and jump to the enquiry form.
+    document.querySelectorAll("[data-package]").forEach(function(link) {
+      link.addEventListener("click", function() {
+        const selectedPackage = this.dataset.package;
+        const requirements = document.getElementById("requirements");
+
+        requirements.value =
+          "Interested in: " + selectedPackage + "\nMy requirements: ";
+      });
+    });
+
+    // Prepare the enquiry message for WhatsApp.
+    document.getElementById("enquiryForm").addEventListener(
+      "submit", function(event) {
+        event.preventDefault();
+
+        const name =
+          document.getElementById("customerName").value.trim();
+
+        const mobile =
+          document.getElementById("customerMobile").value.trim();
+
+        const type =
+          document.getElementById("websiteType").value;
+
+        const requirements =
+          document.getElementById("requirements").value.trim();
+
+        const message =
+          "New Website Enquiry - TK Web Developer\n\n" +
+          "Customer Name: " + name + "\n" +
+          "Mobile Number: " + mobile + "\n" +
+          "Website Type: " + type + "\n" +
+          "Budget / Requirement: " + requirements;
+
+        const url =
+          "https://wa.me/919016249230?text=" +
+          encodeURIComponent(message);
+
+        window.open(url, "_blank", "noopener,noreferrer");
+      }
+    );
+  </script>
 </body>
 </html>
